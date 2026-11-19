@@ -436,6 +436,23 @@ button {
   transform: none;
 }
 
+/* one sheet quietly giving way to the next */
+
+@keyframes sheet-swap {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.sheet-body.is-swap {
+  animation: sheet-swap 0.34s var(--ease) both;
+}
+
 .sheet-bar {
   position: sticky;
   top: 0;
@@ -854,6 +871,75 @@ button {
   text-align: right;
 }
 
+/* =========================
+   the second story — the potter's own letter
+   ========================= */
+
+/* the original words, kept as they were written */
+
+.sheet .letter {
+  margin: clamp(26px, 4.4vw, 40px) 0 0;
+  padding: 0 0 0 clamp(14px, 2.4vw, 20px);
+  border: 0;
+  border-left: 1px solid var(--line);
+  max-width: 34em;
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--muted);
+}
+
+.sheet .letter p {
+  margin: 0 0 0.5em;
+}
+
+.sheet .letter p:last-child {
+  margin-bottom: 0;
+}
+
+/* the same letter, in the language the page is being read in */
+
+.letter-translation {
+  margin-top: clamp(24px, 4vw, 34px);
+}
+
+/* the photographs that follow the postscript — a quiet spread */
+
+.sheet figure.gallery {
+  columns: 2;
+  column-gap: 10px;
+  margin-top: clamp(24px, 4vw, 36px);
+}
+
+.sheet figure.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0 0 10px;
+  border-radius: 2px;
+}
+
+/* the small way back to the first story */
+
+.sheet figure.story-link {
+  margin-top: clamp(56px, 9vw, 84px);
+  text-align: center;
+}
+
+.sheet figure.story-link img {
+  width: clamp(124px, 28vw, 164px);
+  height: auto;
+  max-height: none;
+  border-radius: 2px;
+  box-shadow: 0 10px 18px rgba(44, 44, 43, 0.09);
+}
+
+/* the Japanese original is already the letter in Japanese */
+
+html[data-lang="jp"] [data-hide-lang~="jp"] {
+  display: none;
+}
+
 /* the cup, and the way to order one — a long breath after the manhole */
 
 .sheet figure.order {
@@ -878,8 +964,37 @@ button {
   filter: drop-shadow(0 24px 28px rgba(44, 44, 43, 0.1));
 }
 
-.sheet figure.order .order-cta {
-  margin: 16px 0 0;
+/* the two cups, side by side — the one to order, and the one more to read */
+
+.sheet figure.order .cup-pair {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(14px, 5vw, 48px);
+}
+
+.sheet figure.order .cup-item {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  max-width: 48%;
+}
+
+.sheet figure.order .cup-cap {
+  margin: 14px 0 0;
+  max-width: 100%;
+}
+
+.sheet figure.order .cup-cap .order-btn {
+  padding: 7px 12px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  text-align: center;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .order-btn {
@@ -983,9 +1098,11 @@ button {
   .fig-link,
   .cup-link,
   .order-btn,
+  .sheet-body,
   .sheet figure.phoenix img,
   .sheet figure.order img {
     transition: none !important;
+    animation: none !important;
   }
   .item {
     opacity: 1;

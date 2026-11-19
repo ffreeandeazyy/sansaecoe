@@ -33,8 +33,20 @@ sansaecoe-site/
 | `icon-hours.jpg` | 영업시간 · 오시는 길 (인스타그램 첫 게시물, 처마 위의 새) |
 | `about-night.jpg` | About us… 안의 밤 사진 |
 | `hukui-1.jpg`, `hukui-2.jpg` | 후쿠이 잔 안의 사진 두 장 |
+| `hiyiko2-1.jpg` | 히요코 잔 이야기 (2) 의 첫 사진 |
+| `hiyiko2-2.png` ~ `hiyiko2-7.jpg` | 히요코 잔 이야기 (2) 의 사진 여섯 장 (2 = 2.png, 3 = 3.png, 4 = 4.png, 5·6·7 = jpg) |
+| `hiyiko2-story1.jpg` | 히요코 잔 이야기 (2) 끝에서 이야기 (1) 로 돌아가는 작은 사진 |
 | `phoenix.gif` | 후쿠이 잔 안의 불사조 맨홀 움직이는 그림 (누르면 인스타그램으로) |
 | `viewfinder.png`, `viewfinder-demo.gif` | 뷰파인더 안의 사진과 움직이는 화면 |
+
+## 히요코 잔 이야기 (1) · (2)
+
+`후쿠이 히요코 잔` 종이의 맨 아래에는 똑같은 병아리잔 아이콘 두 개가 나란히 있습니다.
+
+- 왼쪽 잔 — 주문서로 이어집니다 (`히요코 잔 주문하기 ↗`)
+- 오른쪽 잔 — `히요코 잔 이야기 (2)` 종이가 열립니다 (`<template id="t-hiyiko-2">`)
+
+(2) 종이의 글은 Notion 의 `[sansaecoe] Hiyiko Cup Story (2)` 페이지를 그대로 옮긴 것이고, 일본어 원문 편지 아래에 지금 고른 언어의 번역이 붙습니다. 일본어로 보고 있을 때는 원문과 번역이 겹치지 않도록 번역 문단을 숨깁니다 (`style.css` 의 `[data-hide-lang]`).
 
 ## 글자 고치기
 

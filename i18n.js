@@ -74,6 +74,23 @@ window.SANSAECOE_I18N = {
     "hiyiko.cupAlt": "An ivory chick cup with a handle, on its saucer",
     "hiyiko.order": "Order a Hiyiko cup <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
 
+    /* ---- hiyiko cup story (2) ---- */
+    "hiyiko2.kicker": "[sansaecoe] Hiyiko Cup Story (2)",
+    "hiyiko2.title": "The Hiyiko cup story (2)",
+    "hiyiko2.t1": "Hello. My name is Koji Fukushima.",
+    "hiyiko2.t2": "I am very glad to have the chance to show the Hiyiko cups to everyone in Korea.",
+    "hiyiko2.t3": "Each mug is made by hand, one at a time, and each one has a character of its own.",
+    "hiyiko2.t4": "No two feel the same in the hand, so please take one in yours and find the one that suits you.",
+    "hiyiko2.t5": "And I would be truly happy if you kept it close for a long time to come.",
+    "hiyiko2.postTitle": "A note from sansaecoe . . .",
+    "hiyiko2.clay": "The clay of the Fukui region is deeply tied to the history of Echizen ware (越前焼), one of Japan’s six ancient kilns. Rich in minerals such as iron, it takes on fine black speckles on the surface when fired at high heat, and pinholes — the tiny holes left where air escaped — appear during firing as well. These are natural marks, not made by hand, and we would be glad if you enjoyed them too.",
+    "hiyiko2.after": "As in the photos above, every piece is a little different — how the glaze has run, how the handle sits in the hand, the size and number of the small black dots. It is the same white, and yet another white. With this in mind, we hope, as Koji said, that you will find the single Hiyiko cup that is exactly right for you.",
+    "hiyiko2.date": "November 2026, at sansaecoe.",
+    "hiyiko2.cup": "The Hiyiko cup story (2)",
+    "hiyiko2.cupAria": "Open the Hiyiko cup story (2)",
+    "hiyiko2.cardCap": "Read the Hiyiko cup story (1)",
+    "hiyiko2.cardAria": "Open the Hiyiko cup story (1)",
+
     /* ---- viewfinder ---- */
     "vf.kicker": "Viewfinder",
     "vf.title": "Curious about sansaecoe?",
@@ -192,6 +209,23 @@ window.SANSAECOE_I18N = {
     "hiyiko.orderAria": "ひよこカップの注文フォームを開く",
     "hiyiko.cupAlt": "取っ手のついたアイボリー色のひよこカップとソーサー",
     "hiyiko.order": "ひよこカップを注文する <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- hiyiko cup story (2) ---- */
+    "hiyiko2.kicker": "[sansaecoe] Hiyiko Cup Story (2)",
+    "hiyiko2.title": "福井ヒヨコの器のはなし（2）",
+    "hiyiko2.t1": "「 はじめまして、フクシマ　コウヂと申します。",
+    "hiyiko2.t2": "韓国の皆様に、ひよこマグカップをご覧いただく機会をいただきまして、大変嬉しく思います。",
+    "hiyiko2.t3": "このマグカップは、ひとつひとつ手作りで、ひとつひとつに個性があります。",
+    "hiyiko2.t4": "持った感じがそれぞれ違いますので、是非、お手にとって自分にあったひとつを、見つけてください。",
+    "hiyiko2.t5": "そして、末長く御愛用いただけましたら幸いです。」",
+    "hiyiko2.postTitle": "サンセコエから、ひとつ添えて . . .",
+    "hiyiko2.clay": "福井の土は、日本の「六古窯」のひとつである越前焼の歴史と深くつながっています。鉄分などの鉱物成分が豊富に含まれているため、高温で焼かれると表面に細かな黒い点が生まれ、焼成の過程ではピンホール（空気が抜けた小さな穴）も現れます。人為的ではない自然な痕跡ですので、こちらも楽しんでいただけたら嬉しいです。",
+    "hiyiko2.after": "添えた写真のように、器ごとに釉薬の流れ方や、持ち手の握り心地、小さな黒い点の大きさや数も異なります。同じ白でありながら、また別の白でもあります。この点をご参照のうえ、コウジさんの言葉のように、ご自身にぴったりのひとつだけのひよこカップを見つけていただければと思います。",
+    "hiyiko2.date": "2026年11月、サンセコエ。",
+    "hiyiko2.cup": "福井ヒヨコの器のはなし（2）",
+    "hiyiko2.cupAria": "福井ヒヨコの器のはなし（2）を開く",
+    "hiyiko2.cardCap": "福井ヒヨコの器のはなし（1）を読む",
+    "hiyiko2.cardAria": "福井ヒヨコの器のはなし（1）を開く",
 
     /* ---- viewfinder ---- */
     "vf.kicker": "Viewfinder",

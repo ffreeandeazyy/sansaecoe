@@ -12,6 +12,7 @@
   var items = Array.prototype.slice.call(document.querySelectorAll('[data-sheet]'));
   var opener = null;
   var seq = 0;
+  var currentId = null;
 
   if (!veil || !sheetBody) return;
 
@@ -143,13 +144,21 @@
     var tpl = document.getElementById('t-' + id);
     if (!tpl) return;
 
-    opener = trigger || null;
+    /* switching from one sheet to another keeps the thing that opened
+       the first one, so closing gives the focus back where it belongs */
+    if (trigger) opener = trigger;
+    currentId = id;
     seq += 1;
 
     sheetBody.innerHTML = '';
     sheetBody.appendChild(tpl.content.cloneNode(true));
     apply(sheetBody, lang);
     loadDeferred(sheetBody);
+
+    /* a soft change of page when one sheet gives way to the next */
+    sheetBody.classList.remove('is-swap');
+    void sheetBody.offsetWidth;
+    sheetBody.classList.add('is-swap');
 
     syncSheetLabel();
 
@@ -172,6 +181,7 @@
     body.classList.remove('is-locked');
     if (paper) paper.inert = false;
 
+    currentId = null;
     seq += 1;
     var mySeq = seq;
     window.setTimeout(function () {
@@ -190,6 +200,21 @@
   });
 
   closeBtn.addEventListener('click', close);
+
+  /* a small thing inside an open sheet that leads to another sheet —
+     the second cup, and the way back to the first story */
+  sheetBody.addEventListener('click', function (e) {
+    var link = e.target && e.target.closest ? e.target.closest('[data-sheet]') : null;
+    if (!link || !sheetBody.contains(link)) return;
+
+    var next = link.getAttribute('data-sheet');
+    if (!next) return;
+
+    e.preventDefault();
+    if (next === currentId) return;
+    if (!document.getElementById('t-' + next)) return;
+    open(next, null);
+  });
 
   veil.addEventListener('click', function (e) {
     if (e.target === veil) close();
