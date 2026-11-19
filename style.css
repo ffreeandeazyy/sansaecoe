@@ -643,7 +643,8 @@ button {
    not a photograph blown up past its own size */
 
 .sheet figure.viewfinder {
-  margin-top: clamp(32px, 5vh, 52px);
+  margin-top: clamp(72px, 11vh, 110px);
+  margin-bottom: clamp(40px, 6vh, 64px);
   text-align: center;
 }
 
