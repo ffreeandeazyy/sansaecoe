@@ -108,7 +108,7 @@ window.SANSAECOE_I18N = {
     "rental.btn": "Ask us on Instagram <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
 
     /* ---- cookie box ---- */
-    "cookie.kicker": "Paused for now",
+    "cookie.kicker": "emergency‼️",
     "cookie.title": "Cookie boxes, taking a pause",
     "cookie.p1": "We have paused cookie box orders for a few reasons — the shapes are so fine and thin that even packing material cannot keep them from breaking, and the filling melts.. :'(",
     "cookie.p2": "We are thinking it through, and we will come back!",
@@ -245,7 +245,7 @@ window.SANSAECOE_I18N = {
     "rental.btn": "Instagramで問い合わせる <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
 
     /* ---- cookie box ---- */
-    "cookie.kicker": "一時休止中",
+    "cookie.kicker": "emergency‼️",
     "cookie.title": "サンセコエのクッキーボックス、一時休止のお知らせ",
     "cookie.p1": "クッキーボックスはいくつかの理由（繊細で薄い形のため、緩衝材でも守りきれない破損や、フィリングが溶けてしまう問題など..(;_;)）により、いったんご予約を休止しています。",
     "cookie.p2": "よく考えて、また戻ってきます！",
