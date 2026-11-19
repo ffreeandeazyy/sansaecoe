@@ -30,7 +30,7 @@ sansaecoe-site/
 | `icon-rental.png` | 대관 안내 |
 | `icon-cookiebox.png` | 쿠키박스 |
 | `icon-inquiry.jpg` | 기타 문의 및 제안 |
-| `icon-hours.jpg` | 영업시간 · 오시는 길 (인스타그램의 잔 사진) |
+| `icon-hours.jpg` | 영업시간 · 오시는 길 (인스타그램 첫 게시물, 처마 위의 새) |
 | `about-night.jpg` | About us… 안의 밤 사진 |
 | `hukui-1.jpg`, `hukui-2.jpg` | 후쿠이 잔 안의 사진 두 장 |
 | `phoenix.gif` | 후쿠이 잔 안의 불사조 맨홀 움직이는 그림 (누르면 인스타그램으로) |
