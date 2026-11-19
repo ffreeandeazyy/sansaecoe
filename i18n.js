@@ -102,8 +102,7 @@ window.SANSAECOE_I18N = {
     /* ---- rental ---- */
     "rental.kicker": "Rental",
     "rental.title": "Space rental",
-    "rental.p1": "For rental enquiries, please send us a message on Instagram at <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a>!",
-    "rental.p2": "Bookings run from two hours at minimum up to a full day.",
+    "rental.p1": "For rental enquiries, please send us a message on Instagram at <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a>. (Available from 2 hours up to 1 full day)",
     "rental.alt": "The cream door of sansaecoe, in the sun, with shoes lined up outside",
     "rental.btn": "Ask us on Instagram <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
 
@@ -239,8 +238,7 @@ window.SANSAECOE_I18N = {
     /* ---- rental ---- */
     "rental.kicker": "Rental",
     "rental.title": "貸切のご案内",
-    "rental.p1": "貸切のご相談は、Instagram <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a> までメッセージをお願いします。",
-    "rental.p2": "2時間から1日までご利用いただけます。",
+    "rental.p1": "貸切のご相談は、Instagram <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a> までメッセージをお願いします。(基本2時間から1日貸切まで可能)",
     "rental.alt": "日差しの当たるサンセコエのクリーム色のドアと、そろえて脱いだ靴",
     "rental.btn": "Instagramで問い合わせる <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
 
