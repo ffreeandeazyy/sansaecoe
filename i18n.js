@@ -54,7 +54,7 @@ window.SANSAECOE_I18N = {
 
     /* ---- hiyiko cup ---- */
     "hiyiko.kicker": "[sansaecoe] Hiyiko Cup Story",
-    "hiyiko.title": "Hiyiko Fukui cups",
+    "hiyiko.title": "The Hiyiko cup story (1)",
     "hiyiko.lead": "Can a heart come to rest in a thing?",
     "hiyiko.p1": "Holding on to a single thread that began with one chick cup, we arrived at the studio of the artist Koji and his wife.",
     "hiyiko.p2": "The boy who grew up in Fukui says that because he stayed on his home ground, he could become a person who works with its red clay.",
@@ -72,6 +72,7 @@ window.SANSAECOE_I18N = {
     "hiyiko.figcap": "Curious about the phoenix manhole in Fukui? Tap to see.",
     "hiyiko.orderAria": "Open the Hiyiko cup order form",
     "hiyiko.cupAlt": "An ivory chick cup with a handle, on its saucer",
+    "hiyiko.blinkAlt": "An ivory chick cup and saucer that slowly blinks brighter and dimmer",
     "hiyiko.order": "Order a Hiyiko cup <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
 
     /* ---- hiyiko cup story (2) ---- */
@@ -88,7 +89,7 @@ window.SANSAECOE_I18N = {
     "hiyiko2.date": "November 2026, at sansaecoe.",
     "hiyiko2.cup": "The Hiyiko cup story (2)",
     "hiyiko2.cupAria": "Open the Hiyiko cup story (2)",
-    "hiyiko2.cardCap": "Read the Hiyiko cup story (1)",
+    "hiyiko2.cardCap": "The Hiyiko cup story (1)",
     "hiyiko2.cardAria": "Open the Hiyiko cup story (1)",
 
     /* ---- viewfinder ---- */
@@ -190,7 +191,7 @@ window.SANSAECOE_I18N = {
 
     /* ---- hiyiko cup ---- */
     "hiyiko.kicker": "[sansaecoe] Hiyiko Cup Story",
-    "hiyiko.title": "福井ヒヨコの器",
+    "hiyiko.title": "福井ヒヨコの器のはなし（1）",
     "hiyiko.lead": "ものに、心は宿るのでしょうか。",
     "hiyiko.p1": "ひよこカップひとつから続いていく糸を手繰っていくと、たどり着いたのはコウジさんご夫婦の工房でした。",
     "hiyiko.p2": "福井で生まれ育った少年は、故郷の土地に留まったからこそ、この土地の赤い粘土に触れる人になれたのだと話します。",
@@ -208,6 +209,7 @@ window.SANSAECOE_I18N = {
     "hiyiko.figcap": "福井の不死鳥のマンホールが気になったらクリック！",
     "hiyiko.orderAria": "ひよこカップの注文フォームを開く",
     "hiyiko.cupAlt": "取っ手のついたアイボリー色のひよこカップとソーサー",
+    "hiyiko.blinkAlt": "ゆっくり明るくなったり暗くなったりする、アイボリー色のひよこカップとソーサー",
     "hiyiko.order": "ひよこカップを注文する <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
 
     /* ---- hiyiko cup story (2) ---- */
@@ -224,7 +226,7 @@ window.SANSAECOE_I18N = {
     "hiyiko2.date": "2026年11月、サンセコエ。",
     "hiyiko2.cup": "福井ヒヨコの器のはなし（2）",
     "hiyiko2.cupAria": "福井ヒヨコの器のはなし（2）を開く",
-    "hiyiko2.cardCap": "福井ヒヨコの器のはなし（1）を読む",
+    "hiyiko2.cardCap": "福井ヒヨコの器のはなし（1）",
     "hiyiko2.cardAria": "福井ヒヨコの器のはなし（1）を開く",
 
     /* ---- viewfinder ---- */

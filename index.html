@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261119m">
+<link rel="stylesheet" href="style.css?v=20261119n">
 </head>
 <body>
 
@@ -151,7 +151,7 @@
 
 <template id="t-hiyiko">
   <p class="kicker" data-i18n="hiyiko.kicker">[sansaecoe] Hiyiko Cup Story</p>
-  <h2 data-i18n="hiyiko.title">후쿠이 히요코 잔</h2>
+  <h2 data-i18n="hiyiko.title">히요코 잔 이야기 (1)</h2>
 
   <figure class="photo">
     <img class="full" src="assets/hukui-1.jpg" width="2048" height="1365" loading="lazy"
@@ -199,29 +199,28 @@
     </a>
   </figure>
   <figure class="order">
-    <div class="cup-pair">
-      <div class="cup-item">
-        <a class="cup-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
-           target="_blank" rel="noopener noreferrer" aria-label="히요코 잔 주문서 열기" data-i18n-aria="hiyiko.orderAria">
-          <img src="assets/icon-hukui.png" width="1024" height="670" loading="lazy"
-               alt="손잡이가 달린 아이보리빛 병아리잔과 소서" data-i18n-alt="hiyiko.cupAlt">
-        </a>
-        <p class="cup-cap">
-          <a class="order-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
-             target="_blank" rel="noopener noreferrer" data-i18n="hiyiko.order">히요코 잔 주문하기 <span class="arrow" aria-hidden="true">↗</span></a>
-        </p>
-      </div>
-      <div class="cup-item">
-        <a class="cup-link" href="#t-hiyiko-2" data-sheet="hiyiko-2" aria-haspopup="dialog"
-           aria-label="히요코 잔 이야기 (2) 열기" data-i18n-aria="hiyiko2.cupAria">
-          <img src="assets/icon-hukui.png" width="1024" height="670" loading="lazy"
-               alt="손잡이가 달린 아이보리빛 병아리잔과 소서" data-i18n-alt="hiyiko.cupAlt">
-        </a>
-        <p class="cup-cap">
-          <a class="order-btn" href="#t-hiyiko-2" data-sheet="hiyiko-2" aria-haspopup="dialog"
-             data-i18n="hiyiko2.cup">히요코 잔 이야기 (2)</a>
-        </p>
-      </div>
+    <div class="cup-item cup-item--more">
+      <a class="cup-link" href="#t-hiyiko-2" data-sheet="hiyiko-2" aria-haspopup="dialog"
+         aria-label="히요코 잔 이야기 (2) 열기" data-i18n-aria="hiyiko2.cupAria">
+        <img src="assets/icon-hukui.png" width="1024" height="670" loading="lazy"
+             alt="손잡이가 달린 아이보리빛 병아리잔과 소서" data-i18n-alt="hiyiko.cupAlt">
+      </a>
+      <p class="cup-cap">
+        <a class="order-btn" href="#t-hiyiko-2" data-sheet="hiyiko-2" aria-haspopup="dialog"
+           data-i18n="hiyiko2.cup">히요코 잔 이야기 (2)</a>
+      </p>
+    </div>
+
+    <div class="cup-item cup-item--order">
+      <a class="cup-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
+         target="_blank" rel="noopener noreferrer" aria-label="히요코 잔 주문서 열기" data-i18n-aria="hiyiko.orderAria">
+        <img class="cup-blink" src="assets/icon-hukui-blink.gif" width="320" height="209" loading="lazy"
+             alt="깜빡이며 천천히 밝아졌다 어두워지는 아이보리빛 병아리잔과 소서" data-i18n-alt="hiyiko.blinkAlt">
+      </a>
+      <p class="cup-cap">
+        <a class="order-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
+           target="_blank" rel="noopener noreferrer" data-i18n="hiyiko.order">히요코 잔 주문하기 <span class="arrow" aria-hidden="true">↗</span></a>
+      </p>
     </div>
   </figure>
 </template>
@@ -253,7 +252,7 @@
     </div>
   </div>
 
-  <h3 class="sheet-sub" data-i18n="hiyiko2.postTitle">산새코에가 덧붙이는 글 . . .</h3>
+  <h3 class="sheet-sub sheet-sub--breath" data-i18n="hiyiko2.postTitle">산새코에가 덧붙이는 글 . . .</h3>
 
   <div class="prose">
     <div class="stanza">
@@ -282,7 +281,7 @@
     <a class="fig-link" href="#t-hiyiko" data-sheet="hiyiko" aria-haspopup="dialog"
        aria-label="히요코 잔 이야기 (1) 열기" data-i18n-aria="hiyiko2.cardAria">
       <img src="assets/hiyiko2-story1.jpg" width="760" height="498" loading="lazy" alt="">
-      <span class="fig-cap" data-i18n="hiyiko2.cardCap">히요코 잔 이야기 (1) 보기</span>
+      <span class="fig-cap" data-i18n="hiyiko2.cardCap">히요코 잔 이야기 (1)</span>
     </a>
   </figure>
 </template>
@@ -408,7 +407,7 @@
   </article>
 </div>
 
-<script src="i18n.js?v=20261119m" defer></script>
-<script src="script.js?v=20261119m" defer></script>
+<script src="i18n.js?v=20261119n" defer></script>
+<script src="script.js?v=20261119n" defer></script>
 </body>
 </html>

@@ -643,7 +643,7 @@ button {
    not a photograph blown up past its own size */
 
 .sheet figure.viewfinder {
-  margin-top: clamp(22px, 3.6vw, 34px);
+  margin-top: clamp(32px, 5vh, 52px);
   text-align: center;
 }
 
@@ -673,6 +673,12 @@ button {
   letter-spacing: 0.15em;
   line-height: 1.6;
   color: var(--faint);
+}
+
+/* a longer breath before the note the shop adds of its own */
+
+.sheet h3.sheet-sub--breath {
+  margin-top: clamp(56px, 8vh, 88px);
 }
 
 .hours-block {
@@ -943,7 +949,7 @@ html[data-lang="jp"] [data-hide-lang~="jp"] {
 /* the cup, and the way to order one — a long breath after the manhole */
 
 .sheet figure.order {
-  margin-top: clamp(88px, 14vw, 136px);
+  margin-top: clamp(64px, 10vw, 96px);
 }
 
 .sheet figure.order .cup-link {
@@ -964,23 +970,29 @@ html[data-lang="jp"] [data-hide-lang~="jp"] {
   filter: drop-shadow(0 24px 28px rgba(44, 44, 43, 0.1));
 }
 
-/* the two cups, side by side — the one to order, and the one more to read */
+/* the blinking cup is laid on the paper itself, so it casts no square shadow */
 
-.sheet figure.order .cup-pair {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: clamp(14px, 5vw, 48px);
+.sheet figure.order img.cup-blink,
+.sheet figure.order .cup-link:hover img.cup-blink,
+.sheet figure.order .cup-link:focus-visible img.cup-blink {
+  filter: none;
 }
+
+/* the two cups, one beneath the other — first the one more to read,
+   then a wide breath of paper, then the one to order */
 
 .sheet figure.order .cup-item {
   display: flex;
-  flex: 0 1 auto;
   flex-direction: column;
   align-items: center;
-  min-width: 0;
-  max-width: 48%;
+  margin-inline: auto;
+  max-width: 100%;
+}
+
+/* the room between reading on and ordering */
+
+.sheet figure.order .cup-item--order {
+  margin-top: clamp(72px, 11vh, 110px);
 }
 
 .sheet figure.order .cup-cap {

@@ -25,6 +25,7 @@ sansaecoe-site/
 | --- | --- |
 | `hero.jpg` | 첫 화면의 폴라로이드 (About us…) |
 | `icon-hukui.png` | 후쿠이 히요코 잔 |
+| `icon-hukui-blink.gif` | 히요코 잔 주문하기의 깜빡이는 병아리잔 (`icon-hukui.png` 에서 만든 움직이는 그림) |
 | `icon-viewfinder.png` | 산새코에 뷰파인더 |
 | `icon-cloudstone.jpg` | 구름일까 돌멩일까 |
 | `icon-rental.png` | 대관 안내 |
@@ -41,10 +42,13 @@ sansaecoe-site/
 
 ## 히요코 잔 이야기 (1) · (2)
 
-`후쿠이 히요코 잔` 종이의 맨 아래에는 똑같은 병아리잔 아이콘 두 개가 나란히 있습니다.
+`히요코 잔 이야기 (1)` 종이의 맨 아래는 세로로 이어집니다.
 
-- 왼쪽 잔 — 주문서로 이어집니다 (`히요코 잔 주문하기 ↗`)
-- 오른쪽 잔 — `히요코 잔 이야기 (2)` 종이가 열립니다 (`<template id="t-hiyiko-2">`)
+- 불사조 맨홀 (`figure.phoenix`) — 오른쪽 정렬, 그대로
+- 그 아래 가운데 — 병아리잔 하나와 `히요코 잔 이야기 (2)` 단추. 누르면 (2) 종이가 열립니다 (`<template id="t-hiyiko-2">`)
+- 그 아래 넉넉한 여백(`.cup-item--order` 의 `margin-top`)을 두고 — `히요코 잔 주문하기 ↗`. 병아리잔 그림은 `assets/icon-hukui-blink.gif` 로, 천천히 밝아졌다 어두워지며 깜빡입니다(주문서로 이어집니다).
+
+깜빡이는 그림은 `icon-hukui.png` 를 320px 로 줄여 흰 종이(#ffffff) 위에 얹고, 아홉 장의 투명도를 천천히 오가게 해서 만들었습니다(무한 반복, 약 0.8초 한 바퀴).
 
 (2) 종이의 글은 Notion 의 `[sansaecoe] Hiyiko Cup Story (2)` 페이지를 그대로 옮긴 것이고, 일본어 원문 편지 아래에 지금 고른 언어의 번역이 붙습니다. 일본어로 보고 있을 때는 원문과 번역이 겹치지 않도록 번역 문단을 숨깁니다 (`style.css` 의 `[data-hide-lang]`).
 
