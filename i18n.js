@@ -22,7 +22,7 @@ window.SANSAECOE_I18N = {
     "cap.contact": "Other questions & ideas",
     "alt.contact": "White walls, a pendant light, and a wooden bird ornament",
     "cap.hours": "Hours & Directions",
-    "alt.hours": "A small vintage brass alarm clock on a white background",
+    "alt.hours": "A white ceramic cup and saucer on a warm wooden table",
     "hint": "Press the little things, one by one",
 
     /* ---- the sheet itself ---- */
@@ -92,7 +92,7 @@ window.SANSAECOE_I18N = {
     /* ---- cookie box ---- */
     "cookie.kicker": "Paused for now",
     "cookie.title": "Cookie boxes, taking a pause",
-    "cookie.p1": "We have paused cookie box orders for a few reasons — the shapes are so fine and thin that even packing material cannot keep them from breaking, and the filling melts.. ㅠㅠ",
+    "cookie.p1": "We have paused cookie box orders for a few reasons — the shapes are so fine and thin that even packing material cannot keep them from breaking, and the filling melts.. :'(",
     "cookie.p2": "We are thinking it through, and we will come back!",
     "cookie.alt": "A sansaecoe cookie box tied with thread and sealed with a bird sticker",
     "cookie.btn": "Hear when we’re back <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
@@ -141,7 +141,7 @@ window.SANSAECOE_I18N = {
     "cap.contact": "その他のご相談",
     "alt.contact": "白い壁とペンダントライト、木でできた鳥の飾り",
     "cap.hours": "営業時間・アクセス",
-    "alt.hours": "白い背景に置かれた小さなアンティークの目覚まし時計",
+    "alt.hours": "木のテーブルに置かれた白い陶器のカップとソーサー",
     "hint": "小さなものを、ひとつずつ",
 
     /* ---- the sheet itself ---- */
@@ -211,7 +211,7 @@ window.SANSAECOE_I18N = {
     /* ---- cookie box ---- */
     "cookie.kicker": "一時休止中",
     "cookie.title": "サンセコエのクッキーボックス、一時休止のお知らせ",
-    "cookie.p1": "クッキーボックスはいくつかの理由（繊細で薄い形のため、緩衝材でも守りきれない破損や、フィリングが溶けてしまう問題など..ㅠㅠ）により、いったんご予約を休止しています。",
+    "cookie.p1": "クッキーボックスはいくつかの理由（繊細で薄い形のため、緩衝材でも守りきれない破損や、フィリングが溶けてしまう問題など..(;_;)）により、いったんご予約を休止しています。",
     "cookie.p2": "よく考えて、また戻ってきます！",
     "cookie.alt": "鳥の形のシールを貼り、糸で結んだサンセコエのクッキーボックス",
     "cookie.btn": "再開のお知らせを受け取る <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
