@@ -28,10 +28,10 @@ sansaecoe-site/
 | `icon-hukui-blink.gif` | 히요코 잔 주문하기의 깜빡이는 병아리잔 (`icon-hukui.png` 에서 만든 움직이는 그림) |
 | `icon-viewfinder.png` | 산새코에 뷰파인더 |
 | `icon-cloudstone.jpg` | 구름일까 돌멩일까 |
-| `icon-rental.png` | 대관 안내 |
+| `icon-rental.jpg` | 대관 안내 (햇살 드는 크림색 문과 신발) — 종이 안 사진에도 같이 쓰입니다 |
 | `icon-cookiebox.png` | 쿠키박스 |
 | `icon-inquiry.jpg` | 기타 문의 및 제안 |
-| `icon-hours.jpg` | 영업시간 · 오시는 길 (인스타그램 첫 게시물, 처마 위의 새) |
+| `icon-hours.jpg` | 영업시간 · 오시는 길 (인스타그램 스토리에서 상태바·하트를 잘라낸, 은빛 건물 앞 초록 나무) |
 | `about-night.jpg` | About us… 안의 밤 사진 |
 | `hukui-1.jpg`, `hukui-2.jpg` | 후쿠이 잔 안의 사진 두 장 |
 | `hiyiko2-1.jpg` | 히요코 잔 이야기 (2) 의 첫 사진 |
