@@ -15,6 +15,119 @@
 
   if (!veil || !sheetBody) return;
 
+  /* =========================
+     the three languages
+     ========================= */
+
+  var I18N = window.SANSAECOE_I18N || {};
+  var LANGS = ['ko', 'en', 'jp'];
+  var PAGE_LANG = { ko: 'ko', en: 'en', jp: 'ja' };
+  var STORE = 'sansaecoe:lang';
+
+  /* the Korean wording as it is written in index.html */
+  var koText = {};
+  var koAria = {};
+  var koAlt = {};
+
+  function collect(root) {
+    var nodes = root.querySelectorAll('[data-i18n]');
+    var i, k;
+    for (i = 0; i < nodes.length; i++) {
+      k = nodes[i].getAttribute('data-i18n');
+      if (!(k in koText)) koText[k] = nodes[i].innerHTML;
+    }
+    nodes = root.querySelectorAll('[data-i18n-aria]');
+    for (i = 0; i < nodes.length; i++) {
+      k = nodes[i].getAttribute('data-i18n-aria');
+      if (!(k in koAria)) koAria[k] = nodes[i].getAttribute('aria-label') || '';
+    }
+    nodes = root.querySelectorAll('[data-i18n-alt]');
+    for (i = 0; i < nodes.length; i++) {
+      k = nodes[i].getAttribute('data-i18n-alt');
+      if (!(k in koAlt)) koAlt[k] = nodes[i].getAttribute('alt') || '';
+    }
+  }
+
+  collect(document);
+  Array.prototype.forEach.call(document.querySelectorAll('template'), function (tpl) {
+    collect(tpl.content);
+  });
+
+  function apply(root, lang) {
+    var dict = I18N[lang] || {};
+    var nodes = root.querySelectorAll('[data-i18n]');
+    var i, el, k, v;
+
+    for (i = 0; i < nodes.length; i++) {
+      el = nodes[i];
+      k = el.getAttribute('data-i18n');
+      v = dict[k];
+      el.innerHTML = v != null ? v : koText[k] != null ? koText[k] : el.innerHTML;
+    }
+
+    nodes = root.querySelectorAll('[data-i18n-aria]');
+    for (i = 0; i < nodes.length; i++) {
+      el = nodes[i];
+      k = el.getAttribute('data-i18n-aria');
+      v = dict[k];
+      el.setAttribute('aria-label', v != null ? v : koAria[k] != null ? koAria[k] : el.getAttribute('aria-label'));
+    }
+
+    nodes = root.querySelectorAll('[data-i18n-alt]');
+    for (i = 0; i < nodes.length; i++) {
+      el = nodes[i];
+      k = el.getAttribute('data-i18n-alt');
+      v = dict[k];
+      el.setAttribute('alt', v != null ? v : koAlt[k] != null ? koAlt[k] : el.getAttribute('alt'));
+    }
+  }
+
+  var lang = 'ko';
+  try {
+    var saved = window.localStorage.getItem(STORE);
+    if (saved && LANGS.indexOf(saved) !== -1) lang = saved;
+  } catch (e) {}
+  var asked = /[?&]lang=(ko|en|jp)\b/.exec(window.location.search);
+  if (asked) lang = asked[1];
+
+  var langBtns = Array.prototype.slice.call(document.querySelectorAll('.lang [data-lang]'));
+
+  function syncSheetLabel() {
+    var title = sheetBody.querySelector('h2');
+    var sheet = veil.querySelector('.sheet');
+    if (title && sheet) sheet.setAttribute('aria-label', title.textContent.trim());
+  }
+
+  function setLang(next, persist) {
+    if (LANGS.indexOf(next) === -1) next = 'ko';
+    lang = next;
+
+    document.documentElement.setAttribute('lang', PAGE_LANG[next] || 'ko');
+    document.documentElement.setAttribute('data-lang', next);
+
+    apply(document, next);
+
+    langBtns.forEach(function (btn) {
+      var on = btn.getAttribute('data-lang') === next;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.classList.toggle('is-on', on);
+    });
+
+    syncSheetLabel();
+
+    if (persist) {
+      try {
+        window.localStorage.setItem(STORE, next);
+      } catch (e) {}
+    }
+  }
+
+  langBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setLang(btn.getAttribute('data-lang'), true);
+    });
+  });
+
   /* the objects settle in, one after another */
   window.setTimeout(function () {
     document.documentElement.classList.add('is-ready');
@@ -35,11 +148,10 @@
 
     sheetBody.innerHTML = '';
     sheetBody.appendChild(tpl.content.cloneNode(true));
+    apply(sheetBody, lang);
     loadDeferred(sheetBody);
 
-    var title = sheetBody.querySelector('h2');
-    var sheet = veil.querySelector('.sheet');
-    if (title && sheet) sheet.setAttribute('aria-label', title.textContent.trim());
+    syncSheetLabel();
 
     veil.hidden = false;
     /* next frame, so the transition runs */
@@ -50,7 +162,7 @@
     if (paper) paper.inert = true;
     body.classList.add('is-locked');
     body.classList.add('has-opened');
-    sheet.scrollTop = 0;
+    veil.querySelector('.sheet').scrollTop = 0;
 
     closeBtn.focus({ preventScroll: true });
   }
@@ -98,4 +210,7 @@
       window.setTimeout(function () { open(id, null); }, 200);
     }
   }
+
+  /* the page starts in Korean unless another language was chosen before */
+  setLang(lang, !!asked);
 })();

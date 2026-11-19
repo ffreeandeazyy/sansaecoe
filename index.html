@@ -16,11 +16,19 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261119e">
+<link rel="stylesheet" href="style.css?v=20261119f">
 </head>
 <body>
 
 <div class="paper">
+
+  <nav class="lang" aria-label="Language">
+    <button type="button" data-lang="ko" aria-pressed="true">KR</button>
+    <span class="dot" aria-hidden="true">·</span>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <span class="dot" aria-hidden="true">·</span>
+    <button type="button" data-lang="jp" aria-pressed="false">JP</button>
+  </nav>
 
   <div class="mark">
     <span class="word">. . . s a n s a e c o e . . .</span>
@@ -30,7 +38,7 @@
   <div class="canvas" id="canvas">
 
     <button class="item item--print" type="button" data-sheet="about"
-            aria-haspopup="dialog" aria-label="About us"
+            aria-haspopup="dialog" aria-label="About us" data-i18n-aria="aria.about"
             style="--x:calc(50% - var(--w) / 2); --y:calc(50% - var(--w) * 0.7507); --w:clamp(200px, min(24vw, 32vh), 360px); --r:0deg; --d:.05s; --wm:290px; --shift:0px">
       <img src="assets/hero.jpg" width="2048" height="3075" alt="">
       <span class="cap">About us…</span>
@@ -40,55 +48,63 @@
             aria-haspopup="dialog"
             style="--x:14%; --y:1.5%; --w:clamp(112px, 10.6vw, 156px); --r:4.5deg; --d:.12s; --wm:132px; --shift:18px">
       <img src="assets/icon-hukui.png" width="1024" height="670"
-           alt="후쿠이 히요코 작가가 만든 병아리잔">
-      <span class="cap">후쿠이 히요코 잔</span>
+           alt="후쿠이 히요코 작가가 만든 병아리잔" data-i18n-alt="alt.hiyiko">
+      <span class="cap" data-i18n="cap.hiyiko">후쿠이 히요코 잔</span>
     </button>
 
     <button class="item" type="button" data-sheet="viewfinder"
             aria-haspopup="dialog"
             style="--x:76%; --y:6%; --w:clamp(102px, 9.6vw, 140px); --r:-3.5deg; --d:.2s; --wm:120px; --shift:-18px">
       <img src="assets/icon-viewfinder.png" width="1024" height="696"
-           alt="‘산새코에가 궁금하세요?’라고 적힌 흰색 뷰파인더">
-      <span class="cap">산새코에 뷰파인더 미리보기</span>
+           alt="‘산새코에가 궁금하세요?’라고 적힌 흰색 뷰파인더" data-i18n-alt="alt.viewfinder">
+      <span class="cap" data-i18n="cap.viewfinder">산새코에 뷰파인더 미리보기</span>
     </button>
 
     <a class="item item--cloudstone"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdW_Kb22xnFRqXxm4qXGi6lfN6mf4TlDhKG9sZezgfUZCB1bQ/closedform"
             target="_blank" rel="noopener noreferrer"
-            aria-label="구름일까 돌멩일까 주문서 (마감) — 주문 마감 안내 열기"
+            aria-label="구름일까 돌멩일까 주문서 (마감) — 주문 마감 안내 열기" data-i18n-aria="aria.cloudstone"
             style="--x:68%; --y:45%; --w:clamp(90px, 8.4vw, 124px); --r:-2.5deg; --d:.26s; --wm:104px; --shift:14px">
       <img src="assets/icon-cloudstone.jpg" width="1024" height="1024"
-           alt="구름 같기도, 돌멩이 같기도 한 흰빛의 표면">
-      <span class="cap">구름일까 돌멩일까 <span class="muted">(마감)</span></span>
+           alt="구름 같기도, 돌멩이 같기도 한 흰빛의 표면" data-i18n-alt="alt.cloudstone">
+      <span class="cap" data-i18n="cap.cloudstone">구름일까 돌멩일까 <span class="muted">(마감)</span></span>
     </a>
 
     <button class="item" type="button" data-sheet="rental"
             aria-haspopup="dialog"
             style="--x:4%; --y:38%; --w:clamp(68px, 6.4vw, 94px); --r:-5deg; --d:.34s; --wm:80px; --shift:-20px">
       <img src="assets/icon-rental.png" width="935" height="1330"
-           alt="산새코에의 노란 문">
-      <span class="cap">대관 안내</span>
+           alt="산새코에의 노란 문" data-i18n-alt="alt.rental">
+      <span class="cap" data-i18n="cap.rental">대관 안내</span>
     </button>
 
     <button class="item" type="button" data-sheet="cookiebox"
             aria-haspopup="dialog"
             style="--x:23%; --y:68%; --w:clamp(92px, 8.6vw, 126px); --r:2deg; --d:.4s; --wm:112px; --shift:12px">
       <img src="assets/icon-cookiebox.png" width="594" height="496"
-           alt="새 모양 스티커를 붙이고 실로 묶은 산새코에 쿠키박스">
-      <span class="cap">산새코에 쿠키박스 일시 중단</span>
+           alt="새 모양 스티커를 붙이고 실로 묶은 산새코에 쿠키박스" data-i18n-alt="alt.cookiebox">
+      <span class="cap" data-i18n="cap.cookiebox">산새코에 쿠키박스 일시 중단</span>
     </button>
 
     <button class="item" type="button" data-sheet="contact"
             aria-haspopup="dialog"
             style="--x:87%; --y:62%; --w:clamp(104px, 9.8vw, 144px); --r:3deg; --d:.46s; --wm:128px; --shift:-14px">
       <img src="assets/icon-inquiry.jpg" width="1024" height="689"
-           alt="흰 벽과 펜던트 조명, 나무로 만든 새 장식">
-      <span class="cap">기타 문의 및 제안</span>
+           alt="흰 벽과 펜던트 조명, 나무로 만든 새 장식" data-i18n-alt="alt.contact">
+      <span class="cap" data-i18n="cap.contact">기타 문의 및 제안</span>
+    </button>
+
+    <button class="item" type="button" data-sheet="hours"
+            aria-haspopup="dialog"
+            style="--x:15%; --y:30%; --w:clamp(88px, 8.2vw, 116px); --r:3.5deg; --d:.54s; --wm:86px; --shift:-10px">
+      <img src="assets/icon-hours.png" width="470" height="626"
+           alt="흰 바탕 위의 작은 빈티지 놋쇠 자명종" data-i18n-alt="alt.hours">
+      <span class="cap" data-i18n="cap.hours">영업시간 · 오시는 길</span>
     </button>
 
   </div>
 
-  <p class="hint">작은 것들을 하나씩 눌러보세요</p>
+  <p class="hint" data-i18n="hint">작은 것들을 하나씩 눌러보세요</p>
 
   <footer class="foot">
     <span>© 2026 sansaecoe. All rights reserved.</span>
@@ -100,169 +116,205 @@
 <!-- ============ the sheets ============ -->
 
 <template id="t-about">
-  <p class="kicker">About</p>
-  <h2>About us…</h2>
+  <p class="kicker" data-i18n="about.kicker">About</p>
+  <h2 data-i18n="about.title">About us…</h2>
   <div class="prose">
     <div class="stanza">
-      <p>고개를 높이 들어야 보이는</p>
-      <p>좁은 삼각형 건물의 꼭대기 6층.</p>
-      <p>처음 이 공간을 마주했을 때,</p>
-      <p>도심의 소음에서 멀찍이 떨어져</p>
-      <p>높은 곳에 자리를 잡은 ‘산새의 둥지’같다는 생각을 했습니다.</p>
+      <p data-i18n="about.p1_1">고개를 높이 들어야 보이는</p>
+      <p data-i18n="about.p1_2">좁은 삼각형 건물의 꼭대기 6층.</p>
+      <p data-i18n="about.p1_3">처음 이 공간을 마주했을 때,</p>
+      <p data-i18n="about.p1_4">도심의 소음에서 멀찍이 떨어져</p>
+      <p data-i18n="about.p1_5">높은 곳에 자리를 잡은 ‘산새의 둥지’같다는 생각을 했습니다.</p>
     </div>
     <div class="stanza">
-      <p>산새의 둥지, 그 둥지 속의 <strong>산새</strong>.</p>
-      <p>커피 <code>coffee</code> 를 포함한 음료와 쿠키 <code>cookie</code> 로 시작했기에</p>
-      <p>공통된 알파벳인 <strong>코에</strong> <code>coe</code> 를 붙였고,</p>
-      <p>이는 일본어로 ‘소리(こえ)’라는 뜻을 가지고 있기도 합니다.</p>
-      <p>실제로 이 곳에선 새들의 소리가 가깝게 들리기도 하고,</p>
-      <p>저희가 고심해 고른 배경 음악 속에서도 새들의 지저귐이 섞여 나옵니다.</p>
+      <p data-i18n="about.p2_1">산새의 둥지, 그 둥지 속의 <strong>산새</strong>.</p>
+      <p data-i18n="about.p2_2">커피 <code>coffee</code> 를 포함한 음료와 쿠키 <code>cookie</code> 로 시작했기에</p>
+      <p data-i18n="about.p2_3">공통된 알파벳인 <strong>코에</strong> <code>coe</code> 를 붙였고,</p>
+      <p data-i18n="about.p2_4">이는 일본어로 ‘소리(こえ)’라는 뜻을 가지고 있기도 합니다.</p>
+      <p data-i18n="about.p2_5">실제로 이 곳에선 새들의 소리가 가깝게 들리기도 하고,</p>
+      <p data-i18n="about.p2_6">저희가 고심해 고른 배경 음악 속에서도 새들의 지저귐이 섞여 나옵니다.</p>
     </div>
     <div class="stanza">
-      <p>영어로 적어 본 <code>sansaecoe</code> 는</p>
-      <p>가만히 들여다보면,</p>
-      <p>어느 하나 툭 튀어나온 것 없이 물 흐르듯 매끄러운 모양입니다.</p>
-      <p>이 모양처럼, 이곳에서만큼은</p>
-      <p>편안한 소리와 조화로운 맛을 느끼며</p>
-      <p>부드러운 시간을 보내시길 바랍니다.</p>
+      <p data-i18n="about.p3_1">영어로 적어 본 <code>sansaecoe</code> 는</p>
+      <p data-i18n="about.p3_2">가만히 들여다보면,</p>
+      <p data-i18n="about.p3_3">어느 하나 툭 튀어나온 것 없이 물 흐르듯 매끄러운 모양입니다.</p>
+      <p data-i18n="about.p3_4">이 모양처럼, 이곳에서만큼은</p>
+      <p data-i18n="about.p3_5">편안한 소리와 조화로운 맛을 느끼며</p>
+      <p data-i18n="about.p3_6">부드러운 시간을 보내시길 바랍니다.</p>
     </div>
   </div>
   <figure>
     <img src="assets/about-night.jpg" width="1187" height="1780" loading="lazy"
-         alt="따뜻한 빛이 내려앉은 산새코에의 밤 — 천장 조명과 나무 기둥">
+         alt="따뜻한 빛이 내려앉은 산새코에의 밤 — 천장 조명과 나무 기둥" data-i18n-alt="about.alt">
   </figure>
 </template>
 
 <template id="t-hiyiko">
-  <p class="kicker">[sansaecoe] Hiyiko Cup Story</p>
-  <h2>후쿠이 히요코 잔</h2>
+  <p class="kicker" data-i18n="hiyiko.kicker">[sansaecoe] Hiyiko Cup Story</p>
+  <h2 data-i18n="hiyiko.title">후쿠이 히요코 잔</h2>
 
   <figure class="photo">
     <img class="full" src="assets/hukui-1.jpg" width="2048" height="1365" loading="lazy"
-         alt="풀밭에 무리 지어 피어난 흰 봄꽃">
+         alt="풀밭에 무리 지어 피어난 흰 봄꽃" data-i18n-alt="hiyiko.alt1">
   </figure>
 
   <div class="prose prose--lead">
     <div class="stanza">
-      <p>사물에 마음이 깃들 수 있을까요.</p>
+      <p data-i18n="hiyiko.lead">사물에 마음이 깃들 수 있을까요.</p>
     </div>
     <div class="stanza">
-      <p>병아리잔 하나로 이어진 실타래를 잡고 닿은 곳은 코우지 작가님 부부의 작업실이었습니다.</p>
-      <p>후쿠이에서 나고 자란 소년은 고향 땅에 머물렀기에 이곳의 붉은 점토를 만지는 사람이 될 수 있었다고 말합니다.</p>
-      <p>뜨거운 가마 속에서 거친 흙이 단단해지는 동안, 작가님은 잔의 곡선을 아주 조금씩 더 다정하게 다듬어 나갔습니다.</p>
-      <p>그렇게 20년이라는 시간이 이 작은 잔의 곡선 위에 쌓였습니다.</p>
-      <p>좁은 계단을 올라 마주한 다락방의 빼곡한 병아리잔들 사이로 한 사람이 묵묵히 지켜온 시간이 가만히 고여 있었습니다.</p>
+      <p data-i18n="hiyiko.p1">병아리잔 하나로 이어진 실타래를 잡고 닿은 곳은 코우지 작가님 부부의 작업실이었습니다.</p>
+      <p data-i18n="hiyiko.p2">후쿠이에서 나고 자란 소년은 고향 땅에 머물렀기에 이곳의 붉은 점토를 만지는 사람이 될 수 있었다고 말합니다.</p>
+      <p data-i18n="hiyiko.p3">뜨거운 가마 속에서 거친 흙이 단단해지는 동안, 작가님은 잔의 곡선을 아주 조금씩 더 다정하게 다듬어 나갔습니다.</p>
+      <p data-i18n="hiyiko.p4">그렇게 20년이라는 시간이 이 작은 잔의 곡선 위에 쌓였습니다.</p>
+      <p data-i18n="hiyiko.p5">좁은 계단을 올라 마주한 다락방의 빼곡한 병아리잔들 사이로 한 사람이 묵묵히 지켜온 시간이 가만히 고여 있었습니다.</p>
     </div>
   </div>
 
   <figure class="photo">
     <img class="full" src="assets/hukui-2.jpg" width="2048" height="1365" loading="lazy"
-         alt="초록 잎 사이로 고개를 숙인 흰 꽃송이들">
+         alt="초록 잎 사이로 고개를 숙인 흰 꽃송이들" data-i18n-alt="hiyiko.alt2">
   </figure>
 
   <div class="prose">
     <div class="stanza">
-      <p>좋은 사물에 둘러싸여 살아가는 매일매일의 삶은 우리를 더 나은 곳으로 이끌어줄 수 있을까요.</p>
+      <p data-i18n="hiyiko.q">좋은 사물에 둘러싸여 살아가는 매일매일의 삶은 우리를 더 나은 곳으로 이끌어줄 수 있을까요.</p>
     </div>
   </div>
 
   <div class="prose prose--breath">
     <div class="stanza">
-      <p>준비해 간 쿠키와 차로 마음을 전하고, 건네주신 하부타에 모찌를 품에 안고 돌아오는 길.</p>
-      <p>발치에 닿은 맨홀에는 두마리의 새가 새겨져 있었습니다.</p>
-      <p>여러 차례의 역경을 이겨낸 이 도시의 상징, 불사조라고 합니다.</p>
-      <p>새에 담긴 마음을 모아온 우리의 여정이 낯선 길 위에서도 이어진 것 같아 참 반가웠습니다.</p>
+      <p data-i18n="hiyiko.b1">준비해 간 쿠키와 차로 마음을 전하고, 건네주신 하부타에 모찌를 품에 안고 돌아오는 길.</p>
+      <p data-i18n="hiyiko.b2">발치에 닿은 맨홀에는 두마리의 새가 새겨져 있었습니다.</p>
+      <p data-i18n="hiyiko.b3">여러 차례의 역경을 이겨낸 이 도시의 상징, 불사조라고 합니다.</p>
+      <p data-i18n="hiyiko.b4">새에 담긴 마음을 모아온 우리의 여정이 낯선 길 위에서도 이어진 것 같아 참 반가웠습니다.</p>
     </div>
   </div>
   <figure class="phoenix">
     <a class="fig-link" href="https://www.instagram.com/p/DXIe9bmj5df/?obrf=ZDNkOW4zMnVjenJh"
        target="_blank" rel="noopener noreferrer">
       <img src="assets/phoenix.gif" width="480" height="360" loading="lazy"
-           alt="검은 바탕에 귀와 새가 그려지며 ‘A LITTLE BIRDIE TOLD ME’라고 적히는 움직이는 그림">
-      <span class="fig-cap">후쿠이의 불사조 맨홀이 궁금하면 클릭!</span>
+           alt="검은 바탕에 귀와 새가 그려지며 ‘A LITTLE BIRDIE TOLD ME’라고 적히는 움직이는 그림" data-i18n-alt="hiyiko.gifAlt">
+      <span class="fig-cap" data-i18n="hiyiko.figcap">후쿠이의 불사조 맨홀이 궁금하면 클릭!</span>
     </a>
   </figure>
   <figure class="order">
     <a class="cup-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
-       target="_blank" rel="noopener noreferrer" aria-label="히요코 잔 주문서 열기">
+       target="_blank" rel="noopener noreferrer" aria-label="히요코 잔 주문서 열기" data-i18n-aria="hiyiko.orderAria">
       <img src="assets/icon-hukui.png" width="1024" height="670" loading="lazy"
-           alt="손잡이가 달린 아이보리빛 병아리잔과 소서">
+           alt="손잡이가 달린 아이보리빛 병아리잔과 소서" data-i18n-alt="hiyiko.cupAlt">
     </a>
     <p class="order-cta">
       <a class="order-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
-         target="_blank" rel="noopener noreferrer">히요코 잔 주문하기 <span class="arrow" aria-hidden="true">↗</span></a>
+         target="_blank" rel="noopener noreferrer" data-i18n="hiyiko.order">히요코 잔 주문하기 <span class="arrow" aria-hidden="true">↗</span></a>
     </p>
   </figure>
 </template>
 
 <template id="t-viewfinder">
-  <p class="kicker">Viewfinder</p>
-  <h2>산새코에가 궁금하세요?</h2>
+  <p class="kicker" data-i18n="vf.kicker">Viewfinder</p>
+  <h2 data-i18n="vf.title">산새코에가 궁금하세요?</h2>
   <figure class="viewfinder">
     <img src="assets/viewfinder.png" width="2048" height="1392" loading="lazy"
-         alt="‘산새코에가 궁금하세요?’라고 적힌 흰색 뷰파인더">
+         alt="‘산새코에가 궁금하세요?’라고 적힌 흰색 뷰파인더" data-i18n-alt="vf.alt">
   </figure>
   <div class="callout">
     <span class="icon" aria-hidden="true">💡</span>
-    <span>가게에 준비되어있는 뷰파인더로 산새코에의 장면을 넘겨보세요!</span>
+    <span data-i18n="vf.callout">가게에 준비되어있는 뷰파인더로 산새코에의 장면을 넘겨보세요!</span>
   </div>
   <figure class="viewfinder-demo">
     <img class="full" data-src="assets/viewfinder-demo.gif" width="1920" height="1080"
-         alt="뷰파인더를 돌려 산새코에의 장면을 넘겨보는 모습을 담은 움직이는 이미지">
+         alt="뷰파인더를 돌려 산새코에의 장면을 넘겨보는 모습을 담은 움직이는 이미지" data-i18n-alt="vf.demoAlt">
   </figure>
 </template>
 
 <template id="t-rental">
-  <p class="kicker">Rental</p>
-  <h2>대관 안내</h2>
+  <p class="kicker" data-i18n="rental.kicker">Rental</p>
+  <h2 data-i18n="rental.title">대관 안내</h2>
   <div class="prose">
     <div class="stanza">
-      <p>대관문의는 인스타그램 <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">@sansaecoe</a> 으로 메세지 부탁드립니다!</p>
-      <p>기본 2시간부터 1일 대관까지 가능합니다.</p>
+      <p data-i18n="rental.p1">대관문의는 인스타그램 <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">@sansaecoe</a> 으로 메세지 부탁드립니다!</p>
+      <p data-i18n="rental.p2">기본 2시간부터 1일 대관까지 가능합니다.</p>
     </div>
   </div>
   <figure>
     <img src="assets/icon-rental.png" width="935" height="1330" loading="lazy"
-         alt="산새코에의 노란 문">
+         alt="산새코에의 노란 문" data-i18n-alt="rental.alt">
   </figure>
   <div class="actions">
-    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">인스타그램으로 문의하기 <span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer" data-i18n="rental.btn">인스타그램으로 문의하기 <span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </template>
 
 <template id="t-cookiebox">
-  <p class="kicker">일시 중단</p>
-  <h2>산새코에 쿠키박스 일시 중단</h2>
+  <p class="kicker" data-i18n="cookie.kicker">일시 중단</p>
+  <h2 data-i18n="cookie.title">산새코에 쿠키박스 일시 중단</h2>
   <div class="prose">
     <div class="stanza">
-      <p>쿠키박스는 여러 이유(섬세하고 얇은 모양으로 인해 완충재로도 잡히지 않는 파손이라든지.. 필링이 녹는 문제라든지..ㅠㅠ)로 잠시 예약을 중단하였습니다.</p>
-      <p>고심하여 다시 돌아오겠습니다!</p>
+      <p data-i18n="cookie.p1">쿠키박스는 여러 이유(섬세하고 얇은 모양으로 인해 완충재로도 잡히지 않는 파손이라든지.. 필링이 녹는 문제라든지..ㅠㅠ)로 잠시 예약을 중단하였습니다.</p>
+      <p data-i18n="cookie.p2">고심하여 다시 돌아오겠습니다!</p>
     </div>
   </div>
   <figure>
     <img src="assets/icon-cookiebox.png" width="594" height="496" loading="lazy"
-         alt="새 모양 스티커를 붙이고 실로 묶은 산새코에 쿠키박스">
+         alt="새 모양 스티커를 붙이고 실로 묶은 산새코에 쿠키박스" data-i18n-alt="cookie.alt">
   </figure>
   <div class="actions">
-    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">소식 받아보기 <span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer" data-i18n="cookie.btn">소식 받아보기 <span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </template>
 
 <template id="t-contact">
-  <p class="kicker">Contact</p>
-  <h2>기타 문의 및 제안</h2>
+  <p class="kicker" data-i18n="contact.kicker">Contact</p>
+  <h2 data-i18n="contact.title">기타 문의 및 제안</h2>
   <div class="prose">
     <div class="stanza">
-      <p>기타 문의 및 제안은 <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">@sansaecoe</a> 로 메세지 주세요.</p>
-      <p>언제나 열려있어요!</p>
+      <p data-i18n="contact.p1">기타 문의 및 제안은 <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">@sansaecoe</a> 로 메세지 주세요.</p>
+      <p data-i18n="contact.p2">언제나 열려있어요!</p>
     </div>
   </div>
   <figure>
     <img src="assets/icon-inquiry.jpg" width="1024" height="689" loading="lazy"
-         alt="흰 벽과 펜던트 조명, 나무로 만든 새 장식">
+         alt="흰 벽과 펜던트 조명, 나무로 만든 새 장식" data-i18n-alt="contact.alt">
   </figure>
   <div class="actions">
-    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">인스타그램 @sansaecoe <span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer" data-i18n="contact.btn">인스타그램 @sansaecoe <span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</template>
+
+<template id="t-hours">
+  <p class="kicker" data-i18n="hours.kicker">Hours &amp; Directions</p>
+  <h2 data-i18n="hours.title">영업시간 · 오시는 길</h2>
+
+  <div class="hours-block">
+    <div class="hours-row">
+      <span class="hours-days" data-i18n="hours.days1">일 · 월 · 화 · 목</span>
+      <span class="hours-time">13:00 – 18:00</span>
+      <span class="hours-last" data-i18n="hours.last1">라스트오더 17:20</span>
+    </div>
+    <div class="hours-row">
+      <span class="hours-days" data-i18n="hours.days2">금 · 토</span>
+      <span class="hours-time">13:00 – 20:30</span>
+      <span class="hours-last" data-i18n="hours.last2">라스트오더 19:50</span>
+    </div>
+    <p class="hours-extra" data-i18n="hours.closed">매주 수요일은 정기휴무입니다.</p>
+  </div>
+
+  <p class="hours-note" data-i18n="hours.note">비정기 휴무는 인스타그램 <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">@sansaecoe</a> 에서 알려드립니다.</p>
+
+  <h3 class="sheet-sub" data-i18n="hours.guideTitle">이용 안내</h3>
+  <ul class="rules">
+    <li data-i18n="hours.rule1">1–2인 권장, 최대 3인까지 이용 가능</li>
+    <li data-i18n="hours.rule2">신발을 벗고 입장해 주세요.</li>
+    <li data-i18n="hours.rule3">쿠키 포장 불가</li>
+  </ul>
+
+  <h3 class="sheet-sub" data-i18n="hours.wayTitle">오시는 길</h3>
+  <p class="addr" data-i18n="hours.addr">서울 강남구 압구정로30길 60, 6층</p>
+
+  <div class="actions">
+    <a class="btn" href="https://place.map.kakao.com/2091568251" target="_blank" rel="noopener noreferrer" data-i18n="hours.kakao">카카오맵 <span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="btn" href="https://maps.google.com/?cid=16413181716113041605&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer" data-i18n="hours.google">Google Maps <span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </template>
 
@@ -271,15 +323,16 @@
 <div class="veil" id="veil" hidden>
   <article class="sheet" role="dialog" aria-modal="true" aria-label="산새코에">
     <div class="sheet-bar">
-      <button class="close" type="button" id="closeBtn" aria-label="닫기">
+      <button class="close" type="button" id="closeBtn" aria-label="닫기" data-i18n-aria="ui.closeAria" data-i18n="ui.close">
         닫기 <span class="x" aria-hidden="true">×</span>
       </button>
     </div>
     <div class="sheet-body" id="sheetBody"></div>
-    <div class="sheet-end"><button type="button" data-close>돌아가기</button></div>
+    <div class="sheet-end"><button type="button" data-close data-i18n="ui.back">돌아가기</button></div>
   </article>
 </div>
 
-<script src="script.js?v=20261119e" defer></script>
+<script src="i18n.js?v=20261119f" defer></script>
+<script src="script.js?v=20261119f" defer></script>
 </body>
 </html>

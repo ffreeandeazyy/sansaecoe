@@ -1,0 +1,245 @@
+/* =========================================================
+   . . . s a n s a e c o e . . .
+   the same quiet page, in two more languages
+   (Korean lives in index.html; this file only carries EN · JP)
+   ========================================================= */
+
+window.SANSAECOE_I18N = {
+  en: {
+    /* ---- the canvas ---- */
+    "aria.about": "About us",
+    "cap.hiyiko": "Hiyiko Fukui cups",
+    "alt.hiyiko": "Chick cups made by the artist Hiyiko Fukui",
+    "cap.viewfinder": "A peek through the sansaecoe viewfinder",
+    "alt.viewfinder": "A white viewfinder printed with the words ‘Curious about sansaecoe?’",
+    "aria.cloudstone": "Cloud or stone order form (closed) — open the closed form",
+    "cap.cloudstone": "Cloud, or stone? <span class=\"muted\">(closed)</span>",
+    "alt.cloudstone": "A pale white surface that could be a cloud, or a stone",
+    "cap.rental": "Rental",
+    "alt.rental": "The yellow door of sansaecoe",
+    "cap.cookiebox": "Cookie box, on pause",
+    "alt.cookiebox": "A sansaecoe cookie box tied with thread and sealed with a bird sticker",
+    "cap.contact": "Other questions & ideas",
+    "alt.contact": "White walls, a pendant light, and a wooden bird ornament",
+    "cap.hours": "Hours & Directions",
+    "alt.hours": "A small vintage brass alarm clock on a white background",
+    "hint": "Press the little things, one by one",
+
+    /* ---- the sheet itself ---- */
+    "ui.close": "Close <span class=\"x\" aria-hidden=\"true\">×</span>",
+    "ui.closeAria": "Close",
+    "ui.back": "Back",
+
+    /* ---- about ---- */
+    "about.kicker": "About",
+    "about.title": "About us…",
+    "about.p1_1": "You have to lift your head to see it —",
+    "about.p1_2": "the sixth floor at the top of a narrow triangular building.",
+    "about.p1_3": "The first time I met this space,",
+    "about.p1_4": "far from the noise of the city,",
+    "about.p1_5": "I thought it felt like a small bird’s nest, settled high up.",
+    "about.p2_1": "A nest for a small bird — and the <strong>bird</strong> inside it.",
+    "about.p2_2": "We began with drinks, <code>coffee</code> among them, and cookies, <code>cookie</code>,",
+    "about.p2_3": "so we added the letters they share: <strong>coe</strong>,",
+    "about.p2_4": "which happens also to mean ‘voice’ (こえ) in Japanese.",
+    "about.p2_5": "Here the birds’ voices really do come close,",
+    "about.p2_6": "and even in the music we chose with such care, their chirping drifts in.",
+    "about.p3_1": "Written out in English, <code>sansaecoe</code>",
+    "about.p3_2": "if you look at it quietly,",
+    "about.p3_3": "has a shape as smooth as flowing water, with nothing jutting out.",
+    "about.p3_4": "Like that shape, we hope that here, at least,",
+    "about.p3_5": "you feel a restful sound and a harmonious taste,",
+    "about.p3_6": "and spend a soft, unhurried stretch of time.",
+    "about.alt": "Sansaecoe at night — warm light resting on the ceiling lights and wooden pillars",
+
+    /* ---- hiyiko cup ---- */
+    "hiyiko.kicker": "[sansaecoe] Hiyiko Cup Story",
+    "hiyiko.title": "Hiyiko Fukui cups",
+    "hiyiko.lead": "Can a heart come to rest in a thing?",
+    "hiyiko.p1": "Holding on to a single thread that began with one chick cup, we arrived at the studio of the artist Koji and his wife.",
+    "hiyiko.p2": "The boy who grew up in Fukui says that because he stayed on his home ground, he could become a person who works with its red clay.",
+    "hiyiko.p3": "While rough earth hardened in the hot kiln, the artist smoothed the curve of the cup a little gentler, and then a little gentler again.",
+    "hiyiko.p4": "Twenty years have settled onto the curve of this small cup that way.",
+    "hiyiko.p5": "Up the narrow stairs, among the crowded rows of chick cups in the attic, the time one person had quietly kept was resting there, gathered and still.",
+    "hiyiko.alt1": "White spring flowers blooming in clusters in a meadow",
+    "hiyiko.alt2": "White blossoms bowing their heads among green leaves",
+    "hiyiko.q": "Can the everyday life we spend surrounded by good things lead us somewhere better?",
+    "hiyiko.b1": "We gave the cookies and tea we had brought, and came home holding the habutae mochi they pressed into our hands.",
+    "hiyiko.b2": "At our feet, the manhole cover had two birds engraved on it.",
+    "hiyiko.b3": "They say it is the phoenix — the symbol of this city, which has come through hardship again and again.",
+    "hiyiko.b4": "It made me glad to feel that our journey — the feelings we had gathered in birds — had carried on even on an unfamiliar road.",
+    "hiyiko.gifAlt": "A moving image on black in which an ear and a bird are drawn and the words ‘A LITTLE BIRDIE TOLD ME’ appear",
+    "hiyiko.figcap": "Curious about the phoenix manhole in Fukui? Tap to see.",
+    "hiyiko.orderAria": "Open the Hiyiko cup order form",
+    "hiyiko.cupAlt": "An ivory chick cup with a handle, on its saucer",
+    "hiyiko.order": "Order a Hiyiko cup <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- viewfinder ---- */
+    "vf.kicker": "Viewfinder",
+    "vf.title": "Curious about sansaecoe?",
+    "vf.alt": "A white viewfinder printed with the words ‘Curious about sansaecoe?’",
+    "vf.callout": "Turn the viewfinder we keep at the café to flip through scenes of sansaecoe.",
+    "vf.demoAlt": "A moving image of sansaecoe’s scenes flipping by as the viewfinder is turned",
+
+    /* ---- rental ---- */
+    "rental.kicker": "Rental",
+    "rental.title": "Space rental",
+    "rental.p1": "For rental enquiries, please send us a message on Instagram at <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a>!",
+    "rental.p2": "Bookings run from two hours at minimum up to a full day.",
+    "rental.alt": "The yellow door of sansaecoe",
+    "rental.btn": "Ask us on Instagram <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- cookie box ---- */
+    "cookie.kicker": "Paused for now",
+    "cookie.title": "Cookie boxes, taking a pause",
+    "cookie.p1": "We have paused cookie box orders for a few reasons — the shapes are so fine and thin that even packing material cannot keep them from breaking, and the filling melts.. ㅠㅠ",
+    "cookie.p2": "We are thinking it through, and we will come back!",
+    "cookie.alt": "A sansaecoe cookie box tied with thread and sealed with a bird sticker",
+    "cookie.btn": "Hear when we’re back <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- contact ---- */
+    "contact.kicker": "Contact",
+    "contact.title": "Other questions & ideas",
+    "contact.p1": "For anything else — a question, an idea, a small suggestion — message us at <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a>.",
+    "contact.p2": "The door is always open.",
+    "contact.alt": "White walls, a pendant light, and a wooden bird ornament",
+    "contact.btn": "Instagram @sansaecoe <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- hours & directions ---- */
+    "hours.kicker": "Visit",
+    "hours.title": "Hours & Directions",
+    "hours.days1": "Sun · Mon · Tue · Thu",
+    "hours.last1": "Last order 17:20",
+    "hours.days2": "Fri · Sat",
+    "hours.last2": "Last order 19:50",
+    "hours.closed": "Closed every Wednesday.",
+    "hours.note": "Any other closures are posted on Instagram <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a>.",
+    "hours.guideTitle": "Good to know",
+    "hours.rule1": "Best for one or two; up to three guests",
+    "hours.rule2": "Please take off your shoes at the door.",
+    "hours.rule3": "Cookies cannot be gift-wrapped",
+    "hours.wayTitle": "Getting here",
+    "hours.addr": "6F, 60 Apgujeong-ro 30-gil, Gangnam-gu, Seoul",
+    "hours.kakao": "Kakao Map <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+    "hours.google": "Google Maps <span class=\"arrow\" aria-hidden=\"true\">↗</span>"
+  },
+
+  jp: {
+    /* ---- the canvas ---- */
+    "aria.about": "サンセコエについて",
+    "cap.hiyiko": "福井ヒヨコの器",
+    "alt.hiyiko": "作家・福井ヒヨコさんが作ったひよこカップ",
+    "cap.viewfinder": "のぞき窓を覗いてみる",
+    "alt.viewfinder": "「サンセコエが気になりますか？」と書かれた白いビューファインダー",
+    "aria.cloudstone": "雲かな石かな 注文フォーム（受付終了）— 受付終了のお知らせを開く",
+    "cap.cloudstone": "雲かな、石かな <span class=\"muted\">(受付終了)</span>",
+    "alt.cloudstone": "雲のようでもあり、石のようでもある白い表面",
+    "cap.rental": "貸切のご案内",
+    "alt.rental": "サンセコエの黄色いドア",
+    "cap.cookiebox": "クッキーボックス 一時休止中",
+    "alt.cookiebox": "鳥の形のシールを貼り、糸で結んだサンセコエのクッキーボックス",
+    "cap.contact": "その他のご相談",
+    "alt.contact": "白い壁とペンダントライト、木でできた鳥の飾り",
+    "cap.hours": "営業時間・アクセス",
+    "alt.hours": "白い背景に置かれた小さなアンティークの目覚まし時計",
+    "hint": "小さなものを、ひとつずつ",
+
+    /* ---- the sheet itself ---- */
+    "ui.close": "閉じる <span class=\"x\" aria-hidden=\"true\">×</span>",
+    "ui.closeAria": "閉じる",
+    "ui.back": "戻る",
+
+    /* ---- about ---- */
+    "about.kicker": "About",
+    "about.title": "サンセコエについて",
+    "about.p1_1": "顔を上げないと見えない、",
+    "about.p1_2": "細い三角形の建物のいちばん上、6階。",
+    "about.p1_3": "この空間に初めて出会ったとき、",
+    "about.p1_4": "街の騒がしさから遠く離れた",
+    "about.p1_5": "高いところにある「小鳥の巣」のようだと思いました。",
+    "about.p2_1": "小鳥の巣、その巣の中の<strong>小鳥</strong>。",
+    "about.p2_2": "コーヒー <code>coffee</code> をはじめとする飲みものと、クッキー <code>cookie</code> から始めたので、",
+    "about.p2_3": "共通する文字の<strong>コエ</strong> <code>coe</code> を添えました。",
+    "about.p2_4": "これは日本語の「こえ（声）」という意味も持っています。",
+    "about.p2_5": "実際にここでは、鳥の声がすぐ近くに聞こえることもあり、",
+    "about.p2_6": "私たちが心を込めて選んだ音楽の中にも、鳥のさえずりが混ざって流れています。",
+    "about.p3_1": "英語でつづった <code>sansaecoe</code> は、",
+    "about.p3_2": "じっと眺めてみると、",
+    "about.p3_3": "どこひとつ突き出ていない、水が流れるようになめらかな形をしています。",
+    "about.p3_4": "その形のように、ここではどうか",
+    "about.p3_5": "心地よい音と調和のとれた味を感じながら、",
+    "about.p3_6": "やわらかな時間をお過ごしください。",
+    "about.alt": "灯りがやわらかく落ちるサンセコエの夜 — 天井の照明と木の柱",
+
+    /* ---- hiyiko cup ---- */
+    "hiyiko.kicker": "[sansaecoe] Hiyiko Cup Story",
+    "hiyiko.title": "福井ヒヨコの器",
+    "hiyiko.lead": "ものに、心は宿るのでしょうか。",
+    "hiyiko.p1": "ひよこカップひとつから続いていく糸を手繰っていくと、たどり着いたのはコウジさんご夫婦の工房でした。",
+    "hiyiko.p2": "福井で生まれ育った少年は、故郷の土地に留まったからこそ、この土地の赤い粘土に触れる人になれたのだと話します。",
+    "hiyiko.p3": "熱い窯の中で粗い土が固まっていくあいだ、作家さんは器の曲線をほんの少しずつ、よりやさしく整えていきました。",
+    "hiyiko.p4": "そうして20年という時間が、この小さな器の曲線の上に積み重なりました。",
+    "hiyiko.p5": "狭い階段を上がって向かい合った屋根裏で、びっしりと並ぶひよこカップのあいだから、ひとりの人が黙々と守ってきた時間が静かにたたずんでいました。",
+    "hiyiko.alt1": "草地に群れ咲く白い春の花",
+    "hiyiko.alt2": "緑の葉のあいだからうつむく白い花",
+    "hiyiko.q": "良いものに囲まれて過ごす毎日は、私たちをどこか良いほうへ連れていってくれるのでしょうか。",
+    "hiyiko.b1": "用意していったクッキーとお茶で気持ちを伝え、手渡された羽二重餅を抱えて帰る道。",
+    "hiyiko.b2": "足もとのマンホールには、二羽の鳥が彫られていました。",
+    "hiyiko.b3": "幾度もの逆境を乗り越えてきたこの街の象徴、不死鳥だそうです。",
+    "hiyiko.b4": "鳥に込めた思いを集めてきた私たちの旅が、見知らぬ道の上でも続いていたようで、とてもうれしく思いました。",
+    "hiyiko.gifAlt": "黒い画面に耳と鳥が描かれ、「A LITTLE BIRDIE TOLD ME」の文字が現れるアニメーション",
+    "hiyiko.figcap": "福井の不死鳥のマンホールが気になったらクリック！",
+    "hiyiko.orderAria": "ひよこカップの注文フォームを開く",
+    "hiyiko.cupAlt": "取っ手のついたアイボリー色のひよこカップとソーサー",
+    "hiyiko.order": "ひよこカップを注文する <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- viewfinder ---- */
+    "vf.kicker": "Viewfinder",
+    "vf.title": "サンセコエが気になりますか？",
+    "vf.alt": "「サンセコエが気になりますか？」と書かれた白いビューファインダー",
+    "vf.callout": "店内に用意しているビューファインダーで、サンセコエの景色をめくってみてください。",
+    "vf.demoAlt": "ビューファインダーを回してサンセコエの景色をめくっていく様子のアニメーション",
+
+    /* ---- rental ---- */
+    "rental.kicker": "Rental",
+    "rental.title": "貸切のご案内",
+    "rental.p1": "貸切のご相談は、Instagram <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a> までメッセージをお願いします。",
+    "rental.p2": "2時間から1日までご利用いただけます。",
+    "rental.alt": "サンセコエの黄色いドア",
+    "rental.btn": "Instagramで問い合わせる <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- cookie box ---- */
+    "cookie.kicker": "一時休止中",
+    "cookie.title": "サンセコエのクッキーボックス、一時休止のお知らせ",
+    "cookie.p1": "クッキーボックスはいくつかの理由（繊細で薄い形のため、緩衝材でも守りきれない破損や、フィリングが溶けてしまう問題など..ㅠㅠ）により、いったんご予約を休止しています。",
+    "cookie.p2": "よく考えて、また戻ってきます！",
+    "cookie.alt": "鳥の形のシールを貼り、糸で結んだサンセコエのクッキーボックス",
+    "cookie.btn": "再開のお知らせを受け取る <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- contact ---- */
+    "contact.kicker": "Contact",
+    "contact.title": "その他のご相談・ご提案",
+    "contact.p1": "その他のご相談やご提案は <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a> までメッセージをお願いします。",
+    "contact.p2": "いつでも歓迎しています。",
+    "contact.alt": "白い壁とペンダントライト、木でできた鳥の飾り",
+    "contact.btn": "Instagram @sansaecoe <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+
+    /* ---- hours & directions ---- */
+    "hours.kicker": "Visit",
+    "hours.title": "営業時間・アクセス",
+    "hours.days1": "日・月・火・木",
+    "hours.last1": "ラストオーダー 17:20",
+    "hours.days2": "金・土",
+    "hours.last2": "ラストオーダー 19:50",
+    "hours.closed": "毎週水曜日は定休日です。",
+    "hours.note": "臨時休業はInstagram <a href=\"https://www.instagram.com/sansaecoe\" target=\"_blank\" rel=\"noopener noreferrer\">@sansaecoe</a> でお知らせします。",
+    "hours.guideTitle": "ご利用について",
+    "hours.rule1": "1〜2名さまにおすすめ、最大3名さままで",
+    "hours.rule2": "お靴を脱いでお上がりください。",
+    "hours.rule3": "クッキーの包装はできません",
+    "hours.wayTitle": "アクセス",
+    "hours.addr": "ソウル特別市 江南区 狎鴎亭路30キル 60, 6階",
+    "hours.kakao": "カカオマップ <span class=\"arrow\" aria-hidden=\"true\">↗</span>",
+    "hours.google": "Google Maps <span class=\"arrow\" aria-hidden=\"true\">↗</span>"
+  }
+};

@@ -86,6 +86,50 @@ button {
   padding: clamp(40px, 5.4vw, 66px) clamp(20px, 5vw, 64px) clamp(36px, 3.4vw, 50px);
 }
 
+/* the three languages — three quiet letters, top right */
+
+.lang {
+  position: absolute;
+  top: clamp(14px, 2.2vw, 24px);
+  right: clamp(20px, 5vw, 64px);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  color: var(--faint);
+}
+
+.lang button {
+  margin: 0;
+  padding: 6px 4px;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.35s var(--ease);
+}
+
+.lang button:hover,
+.lang button:focus-visible {
+  color: var(--ink-soft);
+  outline: none;
+}
+
+.lang button.is-on,
+.lang button[aria-pressed="true"] {
+  color: var(--ink);
+}
+
+.lang .dot {
+  padding: 0 1px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
 /* small wordmark, top centre, a little off */
 
 .mark {
@@ -582,6 +626,121 @@ button {
 }
 
 /* =========================
+   hours & directions — a small printed card
+   ========================= */
+
+.sheet h3.sheet-sub {
+  margin: clamp(28px, 4.6vw, 40px) 0 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 1.6;
+  color: var(--faint);
+}
+
+.hours-block {
+  max-width: 30em;
+}
+
+.hours-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 16px;
+  padding: 12px 0 11px;
+  border-top: 1px solid var(--line);
+}
+
+.hours-row:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+
+.hours-days {
+  flex: 1 1 auto;
+  font-size: 14.5px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.hours-time {
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  line-height: 1.7;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.hours-last {
+  flex-basis: 100%;
+  margin-top: -2px;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+  color: var(--faint);
+}
+
+.hours-extra {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.hours-note {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--faint);
+}
+
+.hours-note a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+  transition: border-color 0.35s var(--ease), color 0.35s var(--ease);
+}
+
+.hours-note a:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.sheet .rules {
+  margin: 0;
+  padding: 0;
+  max-width: 34em;
+  list-style: none;
+}
+
+.sheet .rules li {
+  position: relative;
+  margin: 0 0 7px;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+  word-break: keep-all;
+}
+
+.sheet .rules li::before {
+  content: "·";
+  position: absolute;
+  left: 3px;
+  top: 0;
+  color: var(--faint);
+}
+
+.sheet .addr {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+/* =========================
    a clickable picture — a small stamp that leads somewhere
    ========================= */
 
@@ -877,6 +1036,10 @@ button {
 
   .item[data-sheet="contact"] {
     width: 82px;
+  }
+
+  .item[data-sheet="hours"] {
+    width: 66px;
   }
 
   /* the room photo keeps the centre of the page,
