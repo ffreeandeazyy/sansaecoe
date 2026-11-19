@@ -558,6 +558,29 @@ button {
   margin-top: clamp(38px, 6.2vw, 58px);
 }
 
+/* the viewfinder itself — a small object on the paper,
+   not a photograph blown up past its own size */
+
+.sheet figure.viewfinder {
+  margin-top: clamp(22px, 3.6vw, 34px);
+  text-align: center;
+}
+
+.sheet figure.viewfinder img {
+  width: clamp(136px, 32vw, 180px);
+  height: auto;
+  max-height: none;
+  border-radius: 3px;
+  box-shadow: 0 12px 22px rgba(44, 44, 43, 0.08);
+}
+
+/* a long pause, then the little film begins */
+
+.sheet figure.viewfinder-demo {
+  margin-top: clamp(48px, 10vw, 80px);
+  margin-bottom: clamp(48px, 10vw, 80px);
+}
+
 /* =========================
    a clickable picture — a small stamp that leads somewhere
    ========================= */
