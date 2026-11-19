@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>. . . s a n s a e c o e . . .</title>
+<meta name="description" content="서울, 좁은 삼각형 건물의 꼭대기 6층. 산새의 둥지 같은 다락방 카페 산새코에.">
+<meta property="og:title" content=". . . s a n s a e c o e . . .">
+<meta property="og:description" content="a soft place to land — and taste">
+<meta property="og:image" content="assets/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="paper">
+
+  <div class="mark">
+    <span class="word">. . . s a n s a e c o e . . .</span>
+    <p class="tagline">a soft place to land — and taste</p>
+  </div>
+
+  <div class="canvas" id="canvas">
+
+    <button class="item item--print" type="button" data-sheet="about"
+            aria-haspopup="dialog" aria-label="About us"
+            style="--x:3%; --y:1%; --w:clamp(190px, min(22vw, 31vh), 330px); --r:0deg; --d:.05s; --wm:290px; --shift:0px">
+      <img src="assets/hero.jpg" width="2048" height="3075" alt="">
+      <span class="cap">About us…</span>
+    </button>
+
+    <button class="item" type="button" data-sheet="hiyiko"
+            aria-haspopup="dialog"
+            style="--x:36%; --y:3%; --w:clamp(112px, 10.6vw, 156px); --r:4deg; --d:.12s; --wm:132px; --shift:18px">
+      <img src="assets/icon-hukui.png" width="1024" height="670"
+           alt="후쿠이 히요코 작가가 만든 병아리잔">
+      <span class="cap">후쿠이 히요코 잔</span>
+    </button>
+
+    <button class="item" type="button" data-sheet="viewfinder"
+            aria-haspopup="dialog"
+            style="--x:61%; --y:8%; --w:clamp(102px, 9.6vw, 140px); --r:-3.5deg; --d:.2s; --wm:120px; --shift:-18px">
+      <img src="assets/icon-viewfinder.png" width="1024" height="696"
+           alt="‘산새코에가 궁금하세요?’라고 적힌 흰색 뷰파인더">
+      <span class="cap">산새코에 뷰파인더 미리보기</span>
+    </button>
+
+    <button class="item" type="button" data-sheet="cloudstone"
+            aria-haspopup="dialog"
+            style="--x:85%; --y:22%; --w:clamp(90px, 8.4vw, 124px); --r:2.5deg; --d:.26s; --wm:104px; --shift:14px">
+      <img src="assets/icon-cloudstone.jpg" width="1024" height="1024"
+           alt="구름 같기도, 돌멩이 같기도 한 흰빛의 표면">
+      <span class="cap">구름일까 돌멩일까 <span class="muted">(마감)</span></span>
+    </button>
+
+    <button class="item" type="button" data-sheet="rental"
+            aria-haspopup="dialog"
+            style="--x:26.5%; --y:70%; --w:clamp(68px, 6.4vw, 94px); --r:-4deg; --d:.34s; --wm:80px; --shift:-20px">
+      <img src="assets/icon-rental.png" width="935" height="1330"
+           alt="산새코에의 노란 문">
+      <span class="cap">대관 안내</span>
+    </button>
+
+    <button class="item" type="button" data-sheet="cookiebox"
+            aria-haspopup="dialog"
+            style="--x:48%; --y:63%; --w:clamp(92px, 8.6vw, 126px); --r:2deg; --d:.4s; --wm:112px; --shift:12px">
+      <img src="assets/icon-cookiebox.png" width="594" height="496"
+           alt="새 모양 스티커를 붙이고 실로 묶은 산새코에 쿠키박스">
+      <span class="cap">산새코에 쿠키박스 일시 중단</span>
+    </button>
+
+    <button class="item" type="button" data-sheet="contact"
+            aria-haspopup="dialog"
+            style="--x:78%; --y:58%; --w:clamp(104px, 9.8vw, 144px); --r:-2deg; --d:.46s; --wm:128px; --shift:-14px">
+      <img src="assets/icon-inquiry.jpg" width="1024" height="689"
+           alt="흰 벽과 펜던트 조명, 나무로 만든 새 장식">
+      <span class="cap">기타 문의 및 제안</span>
+    </button>
+
+  </div>
+
+  <p class="hint">작은 것들을 하나씩 눌러보세요</p>
+
+  <footer class="foot">
+    <span>© 2026 sansaecoe. All rights reserved.</span>
+    <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">Instagram @sansaecoe</a>
+  </footer>
+
+</div>
+
+<!-- ============ the sheets ============ -->
+
+<template id="t-about">
+  <p class="kicker">About</p>
+  <h2>About us…</h2>
+  <div class="prose">
+    <div class="stanza">
+      <p>고개를 높이 들어야 보이는</p>
+      <p>좁은 삼각형 건물의 꼭대기 6층.</p>
+      <p>처음 이 공간을 마주했을 때,</p>
+      <p>도심의 소음에서 멀찍이 떨어져</p>
+      <p>높은 곳에 자리를 잡은 ‘산새의 둥지’같다는 생각을 했습니다.</p>
+    </div>
+    <div class="stanza">
+      <p>산새의 둥지, 그 둥지 속의 <strong>산새</strong>.</p>
+      <p>커피 <code>coffee</code> 를 포함한 음료와 쿠키 <code>cookie</code> 로 시작했기에</p>
+      <p>공통된 알파벳인 <strong>코에</strong> <code>coe</code> 를 붙였고,</p>
+      <p>이는 일본어로 ‘소리(こえ)’라는 뜻을 가지고 있기도 합니다.</p>
+      <p>실제로 이 곳에선 새들의 소리가 가깝게 들리기도 하고,</p>
+      <p>저희가 고심해 고른 배경 음악 속에서도 새들의 지저귐이 섞여 나옵니다.</p>
+    </div>
+    <div class="stanza">
+      <p>영어로 적어 본 <code>sansaecoe</code> 는</p>
+      <p>가만히 들여다보면,</p>
+      <p>어느 하나 툭 튀어나온 것 없이 물 흐르듯 매끄러운 모양입니다.</p>
+      <p>이 모양처럼, 이곳에서만큼은</p>
+      <p>편안한 소리와 조화로운 맛을 느끼며</p>
+      <p>부드러운 시간을 보내시길 바랍니다.</p>
+    </div>
+  </div>
+  <figure>
+    <img src="assets/about-night.jpg" width="1187" height="1780" loading="lazy"
+         alt="따뜻한 빛이 내려앉은 산새코에의 밤 — 천장 조명과 나무 기둥">
+  </figure>
+</template>
+
+<template id="t-hiyiko">
+  <p class="kicker">[sansaecoe] Hiyiko Cup Story</p>
+  <h2>후쿠이 히요코 잔</h2>
+  <div class="prose">
+    <div class="stanza">
+      <p>사물에 마음이 깃들 수 있을까요.</p>
+      <p>병아리잔 하나로 이어진 실타래를 잡고 닿은 곳은 코우지 작가님 부부의 작업실이었습니다.</p>
+      <p>후쿠이에서 나고 자란 소년은 고향 땅에 머물렀기에 이곳의 붉은 점토를 만지는 사람이 될 수 있었다고 말합니다.</p>
+      <p>뜨거운 가마 속에서 거친 흙이 단단해지는 동안, 작가님은 잔의 곡선을 아주 조금씩 더 다정하게 다듬어 나갔습니다.</p>
+      <p>그렇게 20년이라는 시간이 이 작은 잔의 곡선 위에 쌓였습니다.</p>
+      <p>좁은 계단을 올라 마주한 다락방의 빼곡한 병아리잔들 사이로 한 사람이 묵묵히 지켜온 시간이 가만히 고여 있었습니다.</p>
+    </div>
+  </div>
+  <figure class="pair">
+    <img src="assets/hukui-1.jpg" width="2048" height="1365" loading="lazy"
+         alt="풀밭에 무리 지어 피어난 흰 봄꽃">
+    <img src="assets/hukui-2.jpg" width="2048" height="1365" loading="lazy"
+         alt="초록 잎 사이로 고개를 숙인 흰 꽃송이들">
+  </figure>
+</template>
+
+<template id="t-viewfinder">
+  <p class="kicker">Viewfinder</p>
+  <h2>산새코에가 궁금하세요?</h2>
+  <figure>
+    <img src="assets/viewfinder.png" width="2048" height="1392" loading="lazy"
+         alt="‘산새코에가 궁금하세요?’라고 적힌 흰색 뷰파인더">
+  </figure>
+  <div class="callout">
+    <span class="icon" aria-hidden="true">💡</span>
+    <span>가게에 준비되어있는 뷰파인더로 산새코에의 장면을 넘겨보세요!</span>
+  </div>
+  <figure>
+    <img class="full" data-src="assets/viewfinder-demo.gif" width="1920" height="1080"
+         alt="뷰파인더를 돌려 산새코에의 장면을 넘겨보는 모습을 담은 움직이는 이미지">
+  </figure>
+</template>
+
+<template id="t-cloudstone">
+  <p class="kicker">주문 마감</p>
+  <h2>구름일까 돌멩일까</h2>
+  <div class="prose">
+    <div class="stanza">
+      <p>&lt;구름일까 돌멩일까&gt;의 주문은 마감되었습니다.</p>
+      <p>찾아주셔서 감사합니다!</p>
+    </div>
+  </div>
+  <figure>
+    <img src="assets/icon-cloudstone.jpg" width="1024" height="1024" loading="lazy"
+         alt="구름 같기도, 돌멩이 같기도 한 흰빛의 표면">
+  </figure>
+  <div class="actions">
+    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">인스타그램 @sansaecoe <span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</template>
+
+<template id="t-rental">
+  <p class="kicker">Rental</p>
+  <h2>대관 안내</h2>
+  <div class="prose">
+    <div class="stanza">
+      <p>대관문의는 인스타그램 <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">@sansaecoe</a> 으로 메세지 부탁드립니다!</p>
+      <p>기본 2시간부터 1일 대관까지 가능합니다.</p>
+    </div>
+  </div>
+  <figure>
+    <img src="assets/icon-rental.png" width="935" height="1330" loading="lazy"
+         alt="산새코에의 노란 문">
+  </figure>
+  <div class="actions">
+    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">인스타그램으로 문의하기 <span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</template>
+
+<template id="t-cookiebox">
+  <p class="kicker">일시 중단</p>
+  <h2>산새코에 쿠키박스 일시 중단</h2>
+  <div class="prose">
+    <div class="stanza">
+      <p>쿠키박스는 여러 이유(섬세하고 얇은 모양으로 인해 완충재로도 잡히지 않는 파손이라든지.. 필링이 녹는 문제라든지..ㅠㅠ)로 잠시 예약을 중단하였습니다.</p>
+      <p>고심하여 다시 돌아오겠습니다!</p>
+    </div>
+  </div>
+  <figure>
+    <img src="assets/icon-cookiebox.png" width="594" height="496" loading="lazy"
+         alt="새 모양 스티커를 붙이고 실로 묶은 산새코에 쿠키박스">
+  </figure>
+  <div class="actions">
+    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">소식 받아보기 <span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</template>
+
+<template id="t-contact">
+  <p class="kicker">Contact</p>
+  <h2>기타 문의 및 제안</h2>
+  <div class="prose">
+    <div class="stanza">
+      <p>기타 문의 및 제안은 <a href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">@sansaecoe</a> 로 메세지 주세요.</p>
+      <p>언제나 열려있어요!</p>
+    </div>
+  </div>
+  <figure>
+    <img src="assets/icon-inquiry.jpg" width="1024" height="689" loading="lazy"
+         alt="흰 벽과 펜던트 조명, 나무로 만든 새 장식">
+  </figure>
+  <div class="actions">
+    <a class="btn" href="https://www.instagram.com/sansaecoe" target="_blank" rel="noopener noreferrer">인스타그램 @sansaecoe <span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</template>
+
+<!-- ============ the opened sheet ============ -->
+
+<div class="veil" id="veil" hidden>
+  <article class="sheet" role="dialog" aria-modal="true" aria-label="산새코에">
+    <div class="sheet-bar">
+      <button class="close" type="button" id="closeBtn" aria-label="닫기">
+        닫기 <span class="x" aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="sheet-body" id="sheetBody"></div>
+    <div class="sheet-end"><button type="button" data-close>돌아가기</button></div>
+  </article>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
