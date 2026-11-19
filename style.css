@@ -21,6 +21,10 @@
 
   --ease: cubic-bezier(0.22, 0.61, 0.24, 1);
   --soft: cubic-bezier(0.4, 0.1, 0.2, 1);
+
+  /* the big photograph in the middle of the desktop canvas —
+     the small things gather around it */
+  --hero: clamp(240px, min(32vw, 55vh), 470px);
 }
 
 *,
@@ -173,8 +177,12 @@ button {
   /* on a short laptop window (1280x680, 1366x680, 1440x740 …) the
      viewport-relative height above collapses and squeezes the
      scattered objects on top of each other. the canvas keeps a real
-     floor so the vertical rhythm survives every desktop size. */
-  min-height: clamp(600px, min(56vw, 68vh), 860px);
+     floor so the vertical rhythm survives every desktop size —
+     and it always grows tall enough for the large centre photograph. */
+  min-height: max(
+    clamp(600px, min(56vw, 68vh), 860px),
+    calc(var(--hero) * 1.5015 + 130px)
+  );
 }
 
 .item {
@@ -1022,7 +1030,9 @@ button {
   .item {
     position: static;
     width: var(--wm, 132px);
-    transform: translateX(var(--shift, 0)) rotate(var(--r, 0deg));
+    /* the small things are thrown left and right of the centre line,
+       each with its own tilt (--rm) so the desktop angles stay as they were */
+    transform: translateX(var(--shift, 0)) rotate(var(--rm, var(--r, 0deg)));
     transition-delay: 0s;
   }
 
