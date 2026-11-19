@@ -533,6 +533,31 @@ button {
   max-height: none;
 }
 
+/* the story photographs — one full-width picture at a time,
+   the words fitting between them just as the story was laid out */
+
+.sheet figure.photo {
+  margin: clamp(24px, 4vw, 38px) 0 clamp(28px, 4.6vw, 44px);
+}
+
+.sheet figure.photo img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+/* the one line that opens after the first photograph */
+
+.prose--lead {
+  margin-top: 0;
+}
+
+/* a quiet gap where the story changes its footing */
+
+.prose--breath {
+  margin-top: clamp(38px, 6.2vw, 58px);
+}
+
 /* =========================
    a clickable picture — a small stamp that leads somewhere
    ========================= */
@@ -540,6 +565,12 @@ button {
 .sheet figure.phoenix,
 .sheet figure.order {
   text-align: center;
+}
+
+/* after the story, a long breath of white before the two small things */
+
+.sheet figure.phoenix {
+  margin-top: clamp(72px, 14vw, 128px);
 }
 
 .sheet .fig-link,
@@ -561,16 +592,18 @@ button {
 }
 
 .sheet figure.phoenix img {
-  width: clamp(148px, 36vw, 226px);
+  width: clamp(92px, 22vw, 120px);
   height: auto;
   max-height: none;
-  border-radius: 3px;
-  box-shadow: 0 14px 26px rgba(44, 44, 43, 0.1);
+  border-radius: 2px;
+  box-shadow: 0 10px 18px rgba(44, 44, 43, 0.09);
   transition: box-shadow 0.45s var(--ease), translate 0.45s var(--ease);
 }
 
 .sheet .fig-link .fig-cap {
-  font-size: 12.5px;
+  font-size: 11.5px;
+  width: 14em;
+  max-width: 100%;
   line-height: 1.7;
   letter-spacing: 0.01em;
   color: var(--muted);
@@ -598,7 +631,7 @@ button {
 /* the date, quietly signed at the foot of the story */
 
 .sheet .sheet-date {
-  margin: clamp(26px, 4vw, 40px) 0 0;
+  margin: clamp(16px, 2.6vw, 24px) 0 0;
   font-size: 11.5px;
   letter-spacing: 0.14em;
   color: var(--faint);
@@ -608,7 +641,7 @@ button {
 /* the cup, and the way to order one */
 
 .sheet figure.order {
-  margin-top: clamp(26px, 4vw, 40px);
+  margin-top: clamp(56px, 10vw, 96px);
 }
 
 .sheet figure.order .cup-link {
@@ -616,7 +649,7 @@ button {
 }
 
 .sheet figure.order img {
-  width: clamp(108px, 28vw, 156px);
+  width: clamp(76px, 18vw, 100px);
   height: auto;
   max-height: none;
   transition: translate 0.45s var(--ease), filter 0.45s var(--ease);
@@ -630,19 +663,19 @@ button {
 }
 
 .sheet figure.order .order-cta {
-  margin: 18px 0 0;
+  margin: 16px 0 0;
 }
 
 .order-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   text-decoration: none;
   color: var(--ink);
   border: 1px solid var(--ink);
   border-radius: 999px;
-  padding: 10px 21px;
-  font-size: 12.5px;
+  padding: 7px 15px;
+  font-size: 12px;
   letter-spacing: 0.05em;
   transition: background 0.35s var(--ease), color 0.35s var(--ease),
     transform 0.35s var(--ease);
