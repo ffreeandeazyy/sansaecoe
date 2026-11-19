@@ -22,7 +22,7 @@ window.SANSAECOE_I18N = {
     "cap.contact": "Other questions & ideas",
     "alt.contact": "White walls, a pendant light, and a wooden bird ornament",
     "cap.hours": "Hours & Directions",
-    "alt.hours": "A white ceramic cup and saucer on a warm wooden table",
+    "alt.hours": "A glass of fig milk on a silver tray",
     "hint": "Press the little things, one by one",
 
     /* ---- the sheet itself ---- */
@@ -141,7 +141,7 @@ window.SANSAECOE_I18N = {
     "cap.contact": "その他のご相談",
     "alt.contact": "白い壁とペンダントライト、木でできた鳥の飾り",
     "cap.hours": "営業時間・アクセス",
-    "alt.hours": "木のテーブルに置かれた白い陶器のカップとソーサー",
+    "alt.hours": "銀のお盆に載った、いちじくのミルク",
     "hint": "小さなものを、ひとつずつ",
 
     /* ---- the sheet itself ---- */

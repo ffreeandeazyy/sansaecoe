@@ -228,6 +228,12 @@ button {
   transition: color 0.5s var(--ease);
 }
 
+/* the hours label keeps one readable line under its small icon */
+.item[data-sheet="hours"] .cap {
+  width: max-content;
+  max-width: 12em;
+}
+
 /* the gentle float — objects breathe a little */
 
 @media (prefers-reduced-motion: no-preference) {
