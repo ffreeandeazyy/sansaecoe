@@ -567,10 +567,24 @@ button {
   text-align: center;
 }
 
-/* after the story, a long breath of white before the two small things */
+/* the manhole sits at the right margin, the cup stays in the middle */
 
 .sheet figure.phoenix {
+  text-align: right;
   margin-top: clamp(72px, 14vw, 128px);
+}
+
+.sheet figure.phoenix .fig-link {
+  align-items: flex-end;
+}
+
+.sheet figure.phoenix .fig-cap {
+  width: auto;
+  text-align: right;
+}
+
+.sheet figure.phoenix .fig-link img {
+  margin-inline: 0;
 }
 
 .sheet .fig-link,
@@ -638,10 +652,10 @@ button {
   text-align: right;
 }
 
-/* the cup, and the way to order one */
+/* the cup, and the way to order one — a long breath after the manhole */
 
 .sheet figure.order {
-  margin-top: clamp(56px, 10vw, 96px);
+  margin-top: clamp(88px, 14vw, 136px);
 }
 
 .sheet figure.order .cup-link {
