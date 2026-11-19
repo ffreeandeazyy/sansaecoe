@@ -31,6 +31,7 @@ sansaecoe-site/
 | `icon-inquiry.jpg` | 기타 문의 및 제안 |
 | `about-night.jpg` | About us… 안의 밤 사진 |
 | `hukui-1.jpg`, `hukui-2.jpg` | 후쿠이 잔 안의 사진 두 장 |
+| `phoenix.gif` | 후쿠이 잔 안의 불사조 맨홀 움직이는 그림 (누르면 인스타그램으로) |
 | `viewfinder.png`, `viewfinder-demo.gif` | 뷰파인더 안의 사진과 움직이는 화면 |
 
 ## 글자 고치기

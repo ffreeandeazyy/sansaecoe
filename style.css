@@ -530,6 +530,134 @@ button {
   max-height: none;
 }
 
+/* =========================
+   a clickable picture — a small stamp that leads somewhere
+   ========================= */
+
+.sheet figure.phoenix,
+.sheet figure.order {
+  text-align: center;
+}
+
+.sheet .fig-link,
+.sheet .cup-link {
+  display: inline-block;
+  max-width: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.45s var(--ease);
+}
+
+.sheet .fig-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+
+.sheet figure.phoenix img {
+  width: clamp(148px, 36vw, 226px);
+  height: auto;
+  max-height: none;
+  border-radius: 3px;
+  box-shadow: 0 14px 26px rgba(44, 44, 43, 0.1);
+  transition: box-shadow 0.45s var(--ease), translate 0.45s var(--ease);
+}
+
+.sheet .fig-link .fig-cap {
+  font-size: 12.5px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  word-break: keep-all;
+  transition: color 0.35s var(--ease);
+}
+
+.sheet .fig-link:hover img,
+.sheet .fig-link:focus-visible img {
+  translate: 0 -4px;
+  box-shadow: 0 22px 34px rgba(44, 44, 43, 0.14);
+}
+
+.sheet .fig-link:hover .fig-cap,
+.sheet .fig-link:focus-visible .fig-cap {
+  color: var(--ink);
+}
+
+.sheet .fig-link:focus-visible,
+.sheet .cup-link:focus-visible {
+  outline: 1px dashed var(--faint);
+  outline-offset: 8px;
+}
+
+/* the date, quietly signed at the foot of the story */
+
+.sheet .sheet-date {
+  margin: clamp(26px, 4vw, 40px) 0 0;
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+  text-align: right;
+}
+
+/* the cup, and the way to order one */
+
+.sheet figure.order {
+  margin-top: clamp(26px, 4vw, 40px);
+}
+
+.sheet figure.order .cup-link {
+  display: inline-block;
+}
+
+.sheet figure.order img {
+  width: clamp(108px, 28vw, 156px);
+  height: auto;
+  max-height: none;
+  transition: translate 0.45s var(--ease), filter 0.45s var(--ease);
+  filter: drop-shadow(0 16px 20px rgba(44, 44, 43, 0.06));
+}
+
+.sheet figure.order .cup-link:hover img,
+.sheet figure.order .cup-link:focus-visible img {
+  translate: 0 -4px;
+  filter: drop-shadow(0 24px 28px rgba(44, 44, 43, 0.1));
+}
+
+.sheet figure.order .order-cta {
+  margin: 18px 0 0;
+}
+
+.order-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 10px 21px;
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+
+.order-btn .arrow {
+  font-size: 11px;
+  transform: translateY(-1px);
+}
+
+.order-btn:hover,
+.order-btn:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-1px);
+  outline: none;
+}
+
 .sheet .actions {
   display: flex;
   flex-wrap: wrap;
@@ -599,7 +727,12 @@ button {
   .veil,
   .sheet,
   .btn,
-  .close {
+  .close,
+  .fig-link,
+  .cup-link,
+  .order-btn,
+  .sheet figure.phoenix img,
+  .sheet figure.order img {
     transition: none !important;
   }
   .item {
