@@ -487,6 +487,16 @@ button {
   color: var(--ink);
 }
 
+/* the same quiet dashed line the other small things use, instead of the
+   browser's hard black ring — it shows when a sheet is opened by keyboard
+   or by a link, and the close button takes the focus */
+.close:focus-visible {
+  color: var(--ink);
+  outline: 1px dashed var(--faint);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .close .x {
   font-size: 15px;
   line-height: 1;
