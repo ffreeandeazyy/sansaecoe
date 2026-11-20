@@ -392,7 +392,7 @@
         { q: qOf(item), ok: !!item },
         { q: qOf(paid), ok: !!paid },
         { q: qOf(pack), ok: !!pack },
-        { q: qOf(dateEl), ok: !!dateVal && dateVal >= minISO },
+        { q: qOf(dateEl), ok: /^\d{4}-\d{2}-\d{2}$/.test(dateVal) && dateVal >= minISO },
         { q: qOf(nameEl), ok: !!(nameEl && nameEl.value.trim()) },
         { q: qOf(phoneEl), ok: digits.length >= 9 },
         { q: qOf(privacy), ok: !!(privacy && privacy.checked) }

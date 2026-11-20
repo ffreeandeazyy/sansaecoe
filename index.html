@@ -379,7 +379,8 @@
       <div class="order-q-help">
         <p data-i18n="order.q5help">주문서 작성일 이후 (+1일) 날짜부터 가능합니다. 영업일/시간을 꼭 확인해주세요!</p>
       </div>
-      <input class="order-input order-input--date" type="date" id="orderDate" aria-label="희망 픽업일" required>
+      <input class="order-input order-input--date" type="date" id="orderDate"
+             aria-label="희망 픽업일" data-i18n-aria="order.dateAria" required>
       <p class="order-hint" id="orderDateHint" data-i18n="order.wed">수요일은 휴점이에요. 다른 날로 골라주세요.</p>
     </div>
 
@@ -391,9 +392,6 @@
 
     <div class="order-q" role="group" aria-labelledby="oq7">
       <p class="order-q-title" id="oq7"><span data-i18n="order.q7Title">연락처를 알려주시면 확인 문자를 드릴게요.</span><span class="req" aria-hidden="true">*</span></p>
-      <div class="order-q-help">
-        <p data-i18n="order.q7help">(010-0000-0000)</p>
-      </div>
       <input class="order-input" type="tel" id="orderPhone" name="entry.112857539"
              placeholder="010-0000-0000" inputmode="tel" maxlength="20" autocomplete="tel" required>
     </div>
@@ -401,7 +399,7 @@
     <div class="order-q" role="group" aria-labelledby="oq8">
       <p class="order-q-title" id="oq8"><span data-i18n="order.q8Title">개인정보 수집 및 이용 동의</span><span class="req" aria-hidden="true">*</span></p>
       <div class="order-q-help">
-        <p data-i18n="order.q8body">수집 목적: 히요코 잔 현장 픽업 예약 확인, 입금 확인 및 안내 연락<br>수집 항목: 이름, 연락처(휴대폰 번호), 픽업 일정<br>보유 및 이용 기간: 픽업 완료일 후 30일 이내 파기 (단, 관계 법령에 따라 보존이 필요한 경우 해당 기간까지 보관)<br>귀하는 개인정보 수집 및 이용 동의를 거부할 수 있으나, 거부 시 주문 및 픽업 예약이 제한됩니다.</p>
+        <p data-i18n="order.q8body"><strong>수집 목적:</strong> 히요코 잔 현장 픽업 예약 확인, 입금 확인 및 안내 연락<br><strong>수집 항목:</strong> 이름, 연락처(휴대폰 번호), 픽업 일정<br><strong>보유 및 이용 기간:</strong> 픽업 완료일 후 30일 이내 파기 (단, 관계 법령에 따라 보존이 필요한 경우 해당 기간까지 보관)<br>귀하는 개인정보 수집 및 이용 동의를 거부할 수 있으나, 거부 시 주문 및 픽업 예약이 제한됩니다.</p>
       </div>
       <label class="order-choice">
         <input type="checkbox" name="entry.1072491766" value="동의합니다.">
