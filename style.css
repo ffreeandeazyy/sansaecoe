@@ -1526,10 +1526,11 @@ html.skip-intro body {
 }
 
 .sheet .order-story-lead {
-  margin: 0 0 12px;
-  max-width: 32em;
+  margin: 0 auto 12px;
+  max-width: 34em;
   font-size: 13px;
   line-height: 1.85;
+  text-align: center;
   color: var(--muted);
   word-break: keep-all;
 }
@@ -1576,18 +1577,10 @@ html.skip-intro body {
   min-width: 0;
 }
 
-.sheet .story-card-k {
-  display: block;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  line-height: 1.6;
-  color: var(--faint);
-  word-break: break-word;
-}
 
 .sheet .story-card-t {
   display: block;
-  margin-top: 4px;
+  margin-top: 0;
   font-size: 14.5px;
   font-weight: 600;
   line-height: 1.5;
