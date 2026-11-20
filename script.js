@@ -228,6 +228,74 @@
     if (e.key === 'Escape' && !veil.hidden) close();
   });
 
+  /* =========================
+     the first film
+     the whole screen is one film; one touch takes it away
+     and the sheet of paper is already there underneath
+     ========================= */
+
+  var intro = document.getElementById('intro');
+  var introVideo = document.getElementById('introVideo');
+  var introOpen = false;
+
+  function endIntro() {
+    if (!introOpen) return;
+    introOpen = false;
+
+    intro.classList.add('is-out');
+    intro.setAttribute('aria-hidden', 'true');
+    intro.removeAttribute('role');
+    intro.tabIndex = -1;
+    body.classList.remove('has-intro');
+
+    if (document.activeElement === intro) intro.blur();
+
+    window.setTimeout(function () {
+      intro.hidden = true;
+      if (introVideo) {
+        try { introVideo.pause(); } catch (e) {}
+      }
+    }, 700);
+  }
+
+  if (intro && !intro.hidden) {
+    introOpen = true;
+
+    /* mobile browsers only play a film on their own when it is silent and inline */
+    if (introVideo) {
+      introVideo.muted = true;
+      var playing = introVideo.play();
+      if (playing && typeof playing.catch === 'function') playing.catch(function () {});
+      introVideo.addEventListener('error', endIntro);
+    }
+
+    intro.addEventListener('click', endIntro);
+
+    /* a tap is a tap — the film goes at the touch, not after the page's own delay */
+    intro.addEventListener('touchend', function (e) {
+      e.preventDefault();
+      endIntro();
+    }, { passive: false });
+
+    intro.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        endIntro();
+      }
+    });
+
+    /* Enter and space work even before anyone has tabbed to the film */
+    document.addEventListener('keydown', function (e) {
+      if (!introOpen) return;
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        endIntro();
+      }
+    });
+  } else if (intro) {
+    body.classList.remove('has-intro');
+  }
+
   /* open by hash, e.g. index.html#hiyiko */
   if (window.location.hash) {
     var id = window.location.hash.replace('#', '');

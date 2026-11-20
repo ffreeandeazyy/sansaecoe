@@ -16,9 +16,18 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261119q">
+<link rel="stylesheet" href="style.css?v=20261120a">
 </head>
-<body>
+<body class="has-intro">
+
+<!-- the first film: the whole screen, nothing else, until it is touched -->
+<div class="intro" id="intro" role="button" tabindex="0" aria-label="산새코에 영상 — 눌러서 들어가기">
+  <video class="intro-video" id="introVideo"
+         src="assets/intro.mp4"
+         autoplay muted loop playsinline preload="auto"
+         disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"></video>
+</div>
+<noscript><style>.intro { display: none !important; } body.has-intro { overflow: auto; }</style></noscript>
 
 <div class="paper">
 
@@ -406,7 +415,20 @@
   </article>
 </div>
 
+<script>
+/* a link that is meant to open one sheet straight away (a QR code in the shop)
+   skips the film, so the sheet is there from the first frame */
+(function () {
+  var id = (window.location.hash || '').replace('#', '');
+  if (!id) return;
+  var intro = document.getElementById('intro');
+  if (!intro || !document.getElementById('t-' + id)) return;
+  intro.hidden = true;
+  intro.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('has-intro');
+})();
+</script>
 <script src="i18n.js?v=20261119q" defer></script>
-<script src="script.js?v=20261119q" defer></script>
+<script src="script.js?v=20261120a" defer></script>
 </body>
 </html>
