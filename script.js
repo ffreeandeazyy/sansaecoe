@@ -261,6 +261,9 @@
   /* the pickup is from the day after the order is written, as the form says */
   var PICKUP_FROM_TOMORROW = true;
 
+  /* and no further ahead than three weeks from today */
+  var PICKUP_MAX_DAYS = 21;
+
   /* one word in the language being read, with the Korean as the floor */
   function T(key, ko) {
     var dict = I18N[lang] || {};
@@ -272,11 +275,20 @@
     return (n < 10 ? '0' : '') + n;
   }
 
-  function tomorrowISO() {
+  /* today, moved by a number of days, as the date field wants it */
+  function isoAdded(days) {
     var d = new Date();
     d.setHours(0, 0, 0, 0);
-    d.setDate(d.getDate() + (PICKUP_FROM_TOMORROW ? 1 : 0));
+    d.setDate(d.getDate() + days);
     return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+  }
+
+  function tomorrowISO() {
+    return isoAdded(PICKUP_FROM_TOMORROW ? 1 : 0);
+  }
+
+  function latestISO() {
+    return isoAdded(PICKUP_MAX_DAYS);
   }
 
   /* 11월 24일 / 24 Nov / 11月24日 */
@@ -363,11 +375,15 @@
     var alertEl = form.querySelector('#orderAlert');
     var btn = form.querySelector('.order-submit');
     var minISO = tomorrowISO();
+    var maxISO = latestISO();
 
     /* from tomorrow on, and never on a day we are closed — a Wednesday, or a
        closing of our own. a day that cannot be kept is cleared at once and
        the small line underneath says why, in the reader's own language. */
     function dateHintText(key, iso) {
+      if (key === 'order.tooFar') {
+        return T('order.tooFar', '픽업일은 오늘로부터 최대 3주 이내로 골라주세요.');
+      }
       if (key === 'order.closedDate') {
         return T('order.closedDate', '{date}은 임시 휴무일이에요. 다른 날짜를 골라주세요.').replace('{date}', shortDate(iso));
       }
@@ -395,6 +411,13 @@
          underneath says why. it stays there until a day we can keep is
          chosen — emptying the field again fires its own event, and that
          must not wipe the words away. */
+      /* a day past the three weeks we take orders for: emptied the same way */
+      if (v && v > maxISO) {
+        dateEl.value = '';
+        showDateHint('order.tooFar', v);
+        return;
+      }
+
       var reason = closedReason(v);
       if (reason) {
         dateEl.value = '';
@@ -407,6 +430,7 @@
 
     if (dateEl) {
       dateEl.min = minISO;
+      dateEl.max = maxISO;
       dateEl.addEventListener('change', checkChosenDate);
       dateEl.addEventListener('input', checkChosenDate);
     }
@@ -454,7 +478,7 @@
         { q: qOf(item), ok: !!item },
         { q: qOf(paid), ok: !!paid },
         { q: qOf(pack), ok: !!pack },
-        { q: qOf(dateEl), ok: /^\d{4}-\d{2}-\d{2}$/.test(dateVal) && dateVal >= minISO && !closedReason(dateVal) },
+        { q: qOf(dateEl), ok: /^\d{4}-\d{2}-\d{2}$/.test(dateVal) && dateVal >= minISO && dateVal <= maxISO && !closedReason(dateVal) },
         { q: qOf(nameEl), ok: !!(nameEl && nameEl.value.trim()) },
         { q: qOf(phoneEl), ok: digits.length >= 9 },
         { q: qOf(privacy), ok: !!(privacy && privacy.checked) }
@@ -472,7 +496,12 @@
         var ko = '아직 채우지 않은 항목이 있어요. 표시된 곳을 확인해 주세요.';
         if (first.q === qOf(dateEl) && dateVal) {
           var closed = closedReason(dateVal);
-          if (closed) {
+          if (dateVal > maxISO) {
+            dateEl.value = '';
+            showDateHint('order.tooFar', dateVal);
+            key = 'order.tooFar';
+            ko = dateHintText('order.tooFar', dateVal);
+          } else if (closed) {
             dateEl.value = '';
             showDateHint(closed, dateVal);
             key = closed;
