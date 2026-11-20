@@ -1322,3 +1322,14 @@ body.has-intro {
     transition-duration: 0.01s;
   }
 }
+
+/* a link that opens one sheet straight away never shows the film,
+   not even for one frame before the rest of the page arrives */
+html.skip-intro .intro {
+  display: none;
+}
+
+html.skip-intro body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}

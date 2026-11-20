@@ -16,7 +16,17 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261120a">
+<link rel="stylesheet" href="style.css?v=20261120b">
+<script>
+/* a link that opens one sheet straight away (the QR code in the shop) never
+   shows the film — not even for one frame, so this runs before anything is drawn */
+(function () {
+  var SHEETS = ['about', 'hiyiko', 'hiyiko-2', 'viewfinder', 'rental', 'cookiebox', 'contact', 'hours'];
+  var id = (window.location.hash || '').replace(/^#/, '').replace(/^t-/, '');
+  if (!id || SHEETS.indexOf(id) === -1) return;
+  document.documentElement.classList.add('skip-intro');
+})();
+</script>
 </head>
 <body class="has-intro">
 
@@ -27,7 +37,7 @@
          autoplay muted loop playsinline preload="auto"
          disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"></video>
 </div>
-<noscript><style>.intro { display: none !important; } body.has-intro { overflow: auto; }</style></noscript>
+<noscript><style>.intro { display: none !important; } body.has-intro { overflow-x: hidden; overflow-y: auto; }</style></noscript>
 
 <div class="paper">
 
@@ -415,20 +425,7 @@
   </article>
 </div>
 
-<script>
-/* a link that is meant to open one sheet straight away (a QR code in the shop)
-   skips the film, so the sheet is there from the first frame */
-(function () {
-  var id = (window.location.hash || '').replace('#', '');
-  if (!id) return;
-  var intro = document.getElementById('intro');
-  if (!intro || !document.getElementById('t-' + id)) return;
-  intro.hidden = true;
-  intro.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('has-intro');
-})();
-</script>
 <script src="i18n.js?v=20261119q" defer></script>
-<script src="script.js?v=20261120a" defer></script>
+<script src="script.js?v=20261120b" defer></script>
 </body>
 </html>

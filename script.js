@@ -237,6 +237,7 @@
   var intro = document.getElementById('intro');
   var introVideo = document.getElementById('introVideo');
   var introOpen = false;
+  var skipIntro = document.documentElement.classList.contains('skip-intro');
 
   function endIntro() {
     if (!introOpen) return;
@@ -258,7 +259,7 @@
     }, 700);
   }
 
-  if (intro && !intro.hidden) {
+  if (intro && !intro.hidden && !skipIntro) {
     introOpen = true;
 
     /* mobile browsers only play a film on their own when it is silent and inline */
@@ -293,12 +294,20 @@
       }
     });
   } else if (intro) {
+    intro.setAttribute('aria-hidden', 'true');
+    intro.tabIndex = -1;
+    if (skipIntro) {
+      intro.hidden = true;
+      if (introVideo) {
+        try { introVideo.pause(); } catch (e) {}
+      }
+    }
     body.classList.remove('has-intro');
   }
 
-  /* open by hash, e.g. index.html#hiyiko */
+  /* open by hash, e.g. index.html#hiyiko or index.html#t-hiyiko */
   if (window.location.hash) {
-    var id = window.location.hash.replace('#', '');
+    var id = window.location.hash.replace('#', '').replace(/^t-/, '');
     if (document.getElementById('t-' + id)) {
       window.setTimeout(function () { open(id, null); }, 200);
     }
