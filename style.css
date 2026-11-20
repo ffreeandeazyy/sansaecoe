@@ -1897,7 +1897,7 @@ html.is-order-closed .sheet .order-live {
   font-size: 11.5px;
   letter-spacing: 0.14em;
   line-height: 1.7;
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .sheet .order-preparing-note {
