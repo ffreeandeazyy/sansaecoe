@@ -16,12 +16,12 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261120h">
+<link rel="stylesheet" href="style.css?v=20261120i">
 <script>
 /* a link that opens one sheet straight away (the QR code in the shop) never
    shows the film — not even for one frame, so this runs before anything is drawn */
 (function () {
-  var SHEETS = ['about', 'hiyiko', 'hiyiko-2', 'viewfinder', 'rental', 'cookiebox', 'contact', 'hours'];
+  var SHEETS = ['about', 'hiyiko', 'hiyiko-2', 'hiyiko-order', 'viewfinder', 'rental', 'cookiebox', 'contact', 'hours'];
   var id = (window.location.hash || '').replace(/^#/, '').replace(/^t-/, '');
   if (!id || SHEETS.indexOf(id) === -1) return;
   document.documentElement.classList.add('skip-intro');
@@ -231,17 +231,190 @@
     </div>
 
     <div class="cup-item cup-item--order">
-      <a class="cup-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
-         target="_blank" rel="noopener noreferrer" aria-label="히요코 잔 주문서 열기" data-i18n-aria="hiyiko.orderAria">
+      <a class="cup-link" href="#t-hiyiko-order" data-sheet="hiyiko-order" aria-haspopup="dialog"
+         aria-label="히요코 잔 주문서 열기" data-i18n-aria="hiyiko.orderAria">
         <img class="cup-blink" src="assets/icon-hukui-blink.gif" width="320" height="209" loading="lazy"
              alt="깜빡이며 천천히 밝아졌다 어두워지는 아이보리빛 병아리잔과 소서" data-i18n-alt="hiyiko.blinkAlt">
       </a>
       <p class="cup-cap">
-        <a class="order-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeknSGQxWfjR5iD-x4sie4q4XCiZseJlDGxMNcZZKh9boSq6g/closedform"
-           target="_blank" rel="noopener noreferrer" data-i18n="hiyiko.order">히요코 잔 주문하기 <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="order-btn" href="#t-hiyiko-order" data-sheet="hiyiko-order" aria-haspopup="dialog"
+           data-i18n="hiyiko.order">히요코 잔 주문하기</a>
       </p>
     </div>
   </figure>
+</template>
+
+<template id="t-hiyiko-order">
+  <p class="kicker" data-i18n="order.kicker">Order</p>
+  <h2 data-i18n="order.title">히요코 잔 주문하기</h2>
+
+  <div class="prose prose--lead">
+    <div class="stanza">
+      <p data-i18n="order.lead1">산새코에의 히요코 잔 주문서입니다.</p>
+      <p data-i18n="order.lead2">파손위험이 있어 현장수령만 가능합니다.</p>
+    </div>
+  </div>
+
+  <div class="order-facts">
+    <div>
+      <span class="k" data-i18n="order.pickupK">수령지</span>
+      <span class="v" data-i18n="order.pickupV">서울 강남구 압구정로30길 60, 6층 산새코에</span>
+    </div>
+    <div>
+      <span class="k" data-i18n="order.hoursK">영업시간</span>
+      <span class="v" data-i18n="order.hoursV">일–목 13:00 – 18:00<br>금–토 13:00 – 20:30</span>
+    </div>
+    <div>
+      <span class="k" data-i18n="order.closedK">휴점</span>
+      <span class="v" data-i18n="order.closedV">매주 수요일</span>
+    </div>
+  </div>
+
+  <h3 class="sheet-sub" data-i18n="order.cupTitle">[ 히요코 잔에 관하여 ]</h3>
+  <ul class="rules">
+    <li data-i18n="order.spec1">용량: 약 200ml</li>
+    <li data-i18n="order.spec2">크기: 구경 약 8cm x 12cm (손잡이 포함), 높이 약 8cm</li>
+    <li data-i18n="order.spec3">식기세척기, 전자레인지 사용 가능 / 오븐 및 직화 불가</li>
+    <li data-i18n="order.spec4">Made in Japan (Fukui)</li>
+    <li data-i18n="order.price">금액: 히요코 잔 <b>단품 68,000원</b> (*소서 미포함) / 히요코 잔 <b>세트 79,000원</b> (*소서 포함)</li>
+  </ul>
+
+  <div class="order-account">
+    <span class="k" data-i18n="order.accountK">입금계좌</span>
+    <span class="v" data-i18n="order.accountV">새마을금고 <b>9003-3058-7561-3</b> 산새코에</span>
+    <button type="button" class="copy-btn" data-copy="9003-3058-7561-3" data-i18n="order.copy">계좌번호 복사</button>
+  </div>
+
+  <h3 class="sheet-sub" data-i18n="order.soserTitle">[ 소서에 관한 안내 ]</h3>
+  <div class="prose">
+    <div class="stanza">
+      <p data-i18n="order.soser1">매장 내 음료 제공 시 함께 사용하는 소서와 동일한 제품입니다. 세트구매를 희망하시는 분들이 많아 소량 준비하였습니다.</p>
+      <p data-i18n="order.soser2"><strong>산지 및 제작 방식:</strong> 히요코 잔 작가님의 작품이 아닌 별도의 제품으로, 후쿠이현의 에치젠야키(도기)인 히요코 잔과 달리 소서는 기후현의 미노야키(자기)입니다. 만든 지역과 흙의 성질, 제작 방식이 모두 다른 제품입니다.</p>
+      <p data-i18n="order.soser3"><strong>재질 및 질감:</strong> 자기 바탕 위에 내추럴한 마감이 더해진 제품입니다. 마감 부위에 번짐이나 색상이 고르지 않은 부분, 갈색 반점 등도 보입니다. 유약이 얇게 도포된 부위에는 성형 과정에서 생기는 미세한 격자무늬 결이나 흙 본연의 질감이 은은하게 비칠 수 있습니다.</p>
+      <p data-i18n="order.soser4">이처럼 잔과 소서는 <strong>색감, 유약의 두께감, 표면의 촉감이 서로 다르니,</strong> 구매 전 이 점을 꼭 확인해 주시길 부탁드립니다.</p>
+    </div>
+  </div>
+
+  <figure class="order-figure">
+    <img src="assets/order-soser.jpg" width="1600" height="1600" loading="lazy"
+         alt="흰 소서의 모양과 표면, 잔과 함께 놓인 모습을 담은 여섯 장면" data-i18n-alt="order.soserAlt">
+    <figcaption data-i18n="order.soserCap">소서의 사진을 확인해주세요. (사이즈 약 15 × 12.5cm)</figcaption>
+  </figure>
+
+  <p class="order-story" data-i18n="order.storyTitle">히요코 잔의 스토리가 궁금하시다면, 아래의 두가지 링크를 참고해주세요.</p>
+  <p class="order-story-links">
+    <a href="#t-hiyiko" data-sheet="hiyiko" aria-haspopup="dialog" data-i18n="order.story1">[sansaecoe] Hiyiko Cup Story</a>
+    <a href="#t-hiyiko-2" data-sheet="hiyiko-2" aria-haspopup="dialog" data-i18n="order.story2">[sansaecoe] Hiyiko Cup Story (2)</a>
+  </p>
+
+  <figure class="order-figure order-figure--cup">
+    <img src="assets/order-hiyiko.jpg" width="1200" height="1672" loading="lazy"
+         alt="소서 위에 놓인 아이보리빛 히요코 잔" data-i18n-alt="order.previewAlt">
+    <figcaption data-i18n="order.previewCap">* 소서가 포함된 사진입니다.</figcaption>
+  </figure>
+
+  <form class="order-form" id="orderForm" novalidate>
+    <div class="order-q" role="group" aria-labelledby="oq1">
+      <p class="order-q-title" id="oq1"><span data-i18n="order.q1Title">구매 전 꼭 확인해 주세요.</span><span class="req" aria-hidden="true">*</span></p>
+      <div class="order-q-help">
+        <p data-i18n="order.q1body">본 제품은 일본 후쿠이현의 전통 방식으로 가마에서 구워낸 수작업 도자기입니다. 유약을 바르고 고온에서 소성하는 과정에서 유약의 흐름이나 뭉침, 작은 기포 자국(핀홀), 철분으로 인한 검은 점, 미세한 색감 및 크기의 차이가 자연스럽게 나타날 수 있습니다. 이는 고유의 특성이며, 개체별 차이로 인한 교환 및 환불은 어려운 점 양해 부탁드립니다.</p>
+      </div>
+      <label class="order-choice">
+        <input type="checkbox" name="entry.513669972" value="위 내용을 확인하였으며 이에 동의합니다.">
+        <span data-i18n="order.q1opt">위 내용을 확인하였으며 이에 동의합니다.</span>
+      </label>
+    </div>
+
+    <div class="order-q" role="radiogroup" aria-labelledby="oq2">
+      <p class="order-q-title" id="oq2"><span data-i18n="order.q2Title">구매 수량 (최대 2조 가능)</span><span class="req" aria-hidden="true">*</span></p>
+      <div class="order-q-help">
+        <p data-i18n="order.q2help">* * * 단품엔 소서가 포함되지 않습니다. 잔과 소서를 함께 원하신다면 세트로 골라주세요.</p>
+      </div>
+      <label class="order-choice">
+        <input type="radio" name="entry.1212348438" value="히요코 잔 단품 (68,000원)">
+        <span data-i18n="order.opt1">히요코 잔 단품 (68,000원)</span>
+      </label>
+      <label class="order-choice">
+        <input type="radio" name="entry.1212348438" value="히요코 잔 단품 X 2조 (136,000원)">
+        <span data-i18n="order.opt2">히요코 잔 단품 X 2조 (136,000원)</span>
+      </label>
+      <label class="order-choice">
+        <input type="radio" name="entry.1212348438" value="히요코 잔 세트 (79,000원)">
+        <span data-i18n="order.opt3">히요코 잔 세트 (79,000원)</span>
+      </label>
+      <label class="order-choice">
+        <input type="radio" name="entry.1212348438" value="히요코 잔 세트 X 2조 (158,000원)">
+        <span data-i18n="order.opt4">히요코 잔 세트 X 2조 (158,000원)</span>
+      </label>
+    </div>
+
+    <div class="order-q" role="radiogroup" aria-labelledby="oq3">
+      <p class="order-q-title" id="oq3"><span data-i18n="order.q3Title">주문서는 입금 후 작성해주세요. 미입금시 주문은 취소됩니다.</span><span class="req" aria-hidden="true">*</span></p>
+      <div class="order-q-help">
+        <p data-i18n="order.q3help">* 현금영수증은 픽업일에 발급 가능합니다.</p>
+      </div>
+      <label class="order-choice">
+        <input type="radio" name="entry.1393246590" value="입금했습니다!">
+        <span data-i18n="order.opt5">입금했습니다!</span>
+      </label>
+    </div>
+
+    <div class="order-q" role="radiogroup" aria-labelledby="oq4">
+      <p class="order-q-title" id="oq4"><span data-i18n="order.q4Title">미리 포장해둘까요, 아니면 오셔서 직접 고르시겠어요?</span><span class="req" aria-hidden="true">*</span></p>
+      <div class="order-q-help">
+        <p data-i18n="order.q4help">* 포장시 1개씩 박스에 안전하게 개별포장되며, 종이봉투는 무상제공이 어렵습니다. (유상구매 가능)</p>
+      </div>
+      <label class="order-choice">
+        <input type="radio" name="entry.877681113" value="미리 포장해주세요.">
+        <span data-i18n="order.opt6">미리 포장해주세요.</span>
+      </label>
+      <label class="order-choice">
+        <input type="radio" name="entry.877681113" value="직접 고를게요.">
+        <span data-i18n="order.opt7">직접 고를게요.</span>
+      </label>
+    </div>
+
+    <div class="order-q" role="group" aria-labelledby="oq5">
+      <p class="order-q-title" id="oq5"><span data-i18n="order.q5Title">희망 픽업일을 알려주세요.</span><span class="req" aria-hidden="true">*</span></p>
+      <div class="order-q-help">
+        <p data-i18n="order.q5help">주문서 작성일 이후 (+1일) 날짜부터 가능합니다. 영업일/시간을 꼭 확인해주세요!</p>
+      </div>
+      <input class="order-input order-input--date" type="date" id="orderDate" aria-label="희망 픽업일" required>
+      <p class="order-hint" id="orderDateHint" data-i18n="order.wed">수요일은 휴점이에요. 다른 날로 골라주세요.</p>
+    </div>
+
+    <div class="order-q" role="group" aria-labelledby="oq6">
+      <p class="order-q-title" id="oq6"><span data-i18n="order.q6Title">입금자명을 알려주세요.</span><span class="req" aria-hidden="true">*</span></p>
+      <input class="order-input" type="text" id="orderName" name="entry.1884265043"
+             placeholder="입금자명" data-i18n-placeholder="order.q6ph" maxlength="40" autocomplete="name" required>
+    </div>
+
+    <div class="order-q" role="group" aria-labelledby="oq7">
+      <p class="order-q-title" id="oq7"><span data-i18n="order.q7Title">연락처를 알려주시면 확인 문자를 드릴게요.</span><span class="req" aria-hidden="true">*</span></p>
+      <div class="order-q-help">
+        <p data-i18n="order.q7help">(010-0000-0000)</p>
+      </div>
+      <input class="order-input" type="tel" id="orderPhone" name="entry.112857539"
+             placeholder="010-0000-0000" inputmode="tel" maxlength="20" autocomplete="tel" required>
+    </div>
+
+    <div class="order-q" role="group" aria-labelledby="oq8">
+      <p class="order-q-title" id="oq8"><span data-i18n="order.q8Title">개인정보 수집 및 이용 동의</span><span class="req" aria-hidden="true">*</span></p>
+      <div class="order-q-help">
+        <p data-i18n="order.q8body">수집 목적: 히요코 잔 현장 픽업 예약 확인, 입금 확인 및 안내 연락<br>수집 항목: 이름, 연락처(휴대폰 번호), 픽업 일정<br>보유 및 이용 기간: 픽업 완료일 후 30일 이내 파기 (단, 관계 법령에 따라 보존이 필요한 경우 해당 기간까지 보관)<br>귀하는 개인정보 수집 및 이용 동의를 거부할 수 있으나, 거부 시 주문 및 픽업 예약이 제한됩니다.</p>
+      </div>
+      <label class="order-choice">
+        <input type="checkbox" name="entry.1072491766" value="동의합니다.">
+        <span data-i18n="order.q8opt">동의합니다.</span>
+      </label>
+    </div>
+
+    <div class="order-submit-row">
+      <p class="order-alert" id="orderAlert" role="alert"></p>
+      <button type="submit" class="order-submit" data-i18n="order.submit">주문서 보내기</button>
+      <p class="order-foot-note" data-i18n="order.footNote">보내주신 내용은 주문 확인과 픽업 안내에만 사용됩니다.</p>
+    </div>
+  </form>
 </template>
 
 <template id="t-hiyiko-2">
@@ -425,7 +598,7 @@
   </article>
 </div>
 
-<script src="i18n.js?v=20261119q" defer></script>
-<script src="script.js?v=20261120g" defer></script>
+<script src="i18n.js?v=20261120i" defer></script>
+<script src="script.js?v=20261120i" defer></script>
 </body>
 </html>

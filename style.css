@@ -1353,3 +1353,442 @@ html.skip-intro body {
     object-position: 19% center;
   }
 }
+
+/* =========================
+   the order form — a quiet printed form, inside the sheet
+   ========================= */
+
+/* the facts of the pickup, set like a small printed card */
+
+.sheet .order-facts {
+  margin: clamp(26px, 4vw, 38px) 0 0;
+  max-width: 34em;
+}
+
+.sheet .order-facts > div {
+  display: grid;
+  grid-template-columns: 6.2em minmax(0, 1fr);
+  gap: 2px 16px;
+  padding: 12px 0 11px;
+  border-top: 1px solid var(--line);
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.sheet .order-facts > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.sheet .order-facts .k {
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  line-height: 2.1;
+  color: var(--faint);
+  word-break: keep-all;
+}
+
+.sheet .order-facts .v {
+  word-break: keep-all;
+}
+
+/* the price line keeps its numbers still while it is read */
+
+.sheet .rules li b {
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* the account — one block of plain numbers, with a small key beside it */
+
+.sheet .order-account {
+  margin: clamp(18px, 2.8vw, 26px) 0 0;
+  max-width: 34em;
+  padding: clamp(14px, 2.2vw, 18px) clamp(15px, 2.4vw, 20px);
+  background: #f8f7f3;
+  border-radius: 4px;
+}
+
+.sheet .order-account .k {
+  display: block;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+}
+
+.sheet .order-account .v {
+  display: block;
+  margin-top: 3px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+.sheet .order-account .v b {
+  font-family: var(--font-mono);
+  font-size: 0.98em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.sheet .copy-btn {
+  margin-top: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font: inherit;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease),
+    background 0.3s var(--ease);
+}
+
+.sheet .copy-btn:hover,
+.sheet .copy-btn:focus-visible {
+  border-color: var(--ink);
+  color: var(--ink);
+  outline: none;
+}
+
+.sheet .copy-btn.is-done {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+/* the two photographs from the order sheet */
+
+.sheet figure.order-figure {
+  margin: clamp(24px, 4vw, 34px) 0 0;
+}
+
+.sheet figure.order-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin-inline: 0;
+  border-radius: 2px;
+}
+
+.sheet figure.order-figure--cup {
+  text-align: center;
+}
+
+.sheet figure.order-figure--cup img {
+  width: min(100%, 430px);
+  margin-inline: auto;
+}
+
+.sheet figure.order-figure figcaption {
+  margin-top: 9px;
+  font-size: 11.5px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--faint);
+  word-break: keep-all;
+}
+
+/* the two stories, offered quietly before the form begins */
+
+.sheet .order-story {
+  margin: clamp(28px, 4.4vw, 38px) 0 0;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--faint);
+  word-break: keep-all;
+}
+
+.sheet .order-story-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 9px 0 0;
+}
+
+.sheet .order-story-links a {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 11.5px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  text-decoration: none;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.sheet .order-story-links a:hover,
+.sheet .order-story-links a:focus-visible {
+  border-color: var(--ink);
+  color: var(--ink);
+  outline: none;
+}
+
+/* ---- the questions ---- */
+
+.sheet .order-form {
+  margin-top: clamp(46px, 8vw, 68px);
+}
+
+.sheet .order-q {
+  margin: 0;
+  padding: clamp(22px, 3.6vw, 30px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.sheet .order-q-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+.sheet .order-q-title .req {
+  margin-left: 5px;
+  font-weight: 400;
+  color: var(--faint);
+  transition: color 0.3s var(--ease);
+}
+
+.sheet .order-q-help {
+  margin: 7px 0 0;
+}
+
+.sheet .order-q-help p {
+  max-width: 36em;
+  margin: 0 0 0.5em;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+  word-break: keep-all;
+}
+
+.sheet .order-q-help p:last-child {
+  margin-bottom: 0;
+}
+
+.sheet .order-q-help strong {
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.sheet .order-q .order-choice:first-of-type,
+.sheet .order-q .order-input:first-of-type {
+  margin-top: 14px;
+}
+
+/* one answer, laid as a thin line of paper */
+
+.sheet .order-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 7px;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  word-break: keep-all;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease),
+    color 0.3s var(--ease);
+}
+
+.sheet .order-choice:last-of-type {
+  margin-bottom: 0;
+}
+
+.sheet .order-choice:hover {
+  border-color: var(--faint);
+}
+
+.sheet .order-choice input {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  margin: 2px 0 0;
+  accent-color: var(--ink);
+  cursor: pointer;
+}
+
+.sheet .order-choice:has(input:checked) {
+  border-color: var(--ink);
+  background: #fbfaf6;
+  color: var(--ink);
+}
+
+/* a line to write on */
+
+.sheet .order-input {
+  display: block;
+  width: 100%;
+  max-width: 24em;
+  margin-top: 14px;
+  padding: 7px 2px;
+  border: 0;
+  border-bottom: 1px solid var(--faint);
+  border-radius: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color-scheme: light;
+  transition: border-color 0.3s var(--ease);
+}
+
+.sheet .order-input:focus {
+  border-color: var(--ink);
+  outline: none;
+}
+
+.sheet .order-input::placeholder {
+  color: var(--faint);
+}
+
+.sheet .order-input--date {
+  min-height: 2.5em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* a gentle word about a Wednesday */
+
+.sheet .order-hint {
+  display: none;
+  margin: 9px 0 0;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  word-break: keep-all;
+}
+
+.sheet .order-hint.is-on {
+  display: block;
+}
+
+/* what is still missing */
+
+.sheet .order-q.is-missing .order-q-title .req {
+  color: var(--ink);
+}
+
+.sheet .order-submit-row {
+  margin-top: clamp(26px, 4vw, 38px);
+  padding-top: clamp(22px, 3.6vw, 30px);
+  border-top: 1px solid var(--line);
+}
+
+.sheet .order-alert {
+  display: none;
+  margin: 0 0 14px;
+  padding: 11px 15px;
+  background: #f8f7f3;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+.sheet .order-alert.is-on {
+  display: block;
+}
+
+.sheet .order-alert .order-direct {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+}
+
+.sheet .order-alert .order-direct:hover {
+  border-color: var(--ink);
+}
+
+.sheet .order-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+    opacity 0.35s var(--ease);
+}
+
+.sheet .order-submit:hover,
+.sheet .order-submit:focus-visible {
+  background: #1c1c1b;
+  outline: 1px dashed var(--faint);
+  outline-offset: 5px;
+}
+
+.sheet .order-submit[disabled] {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.sheet .order-foot-note {
+  margin: 11px 0 0;
+  font-size: 11.5px;
+  line-height: 1.75;
+  color: var(--faint);
+  word-break: keep-all;
+}
+
+/* the sheet that thanks you once the order has gone */
+
+.sheet .order-done .order-facts {
+  margin-top: clamp(20px, 3vw, 28px);
+}
+
+.sheet .order-done .prose {
+  margin-top: clamp(24px, 4vw, 34px);
+}
+
+@media (max-width: 620px) {
+  .sheet .order-submit {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .sheet .order-facts > div {
+    grid-template-columns: 1fr;
+    gap: 1px;
+    padding: 10px 0;
+  }
+
+  .sheet .order-facts .k {
+    line-height: 1.7;
+  }
+
+  .sheet .order-choice {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+}
