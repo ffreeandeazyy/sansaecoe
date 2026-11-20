@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20261120j">
+<link rel="stylesheet" href="style.css?v=20261120k">
 <script>
 /* a link that opens one sheet straight away (the QR code in the shop) never
    shows the film — not even for one frame, so this runs before anything is drawn */
@@ -248,7 +248,33 @@
   <p class="kicker" data-i18n="order.kicker">Order</p>
   <h2 data-i18n="order.title">히요코 잔 주문하기</h2>
 
-  <div class="prose prose--lead">
+  <figure class="order-figure order-figure--cup order-figure--top">
+    <img src="assets/order-hiyiko.jpg" width="1200" height="1672" loading="lazy"
+         alt="소서 위에 놓인 아이보리빛 히요코 잔" data-i18n-alt="order.previewAlt">
+    <figcaption data-i18n="order.previewCap">* 소서가 포함된 사진입니다.</figcaption>
+  </figure>
+
+  <div class="order-story">
+    <p class="order-story-lead" data-i18n="order.storyTitle">히요코 잔의 스토리가 궁금하시다면, 아래의 두가지 링크를 참고해주세요.</p>
+    <div class="order-story-cards">
+      <a class="story-card" href="#t-hiyiko" data-sheet="hiyiko" aria-haspopup="dialog">
+        <span class="story-card-body">
+          <span class="story-card-k" data-i18n="order.story1">[sansaecoe] Hiyiko Cup Story</span>
+          <span class="story-card-t" data-i18n="hiyiko.title">히요코 잔 이야기 (1)</span>
+        </span>
+        <span class="story-card-a" aria-hidden="true">→</span>
+      </a>
+      <a class="story-card" href="#t-hiyiko-2" data-sheet="hiyiko-2" aria-haspopup="dialog">
+        <span class="story-card-body">
+          <span class="story-card-k" data-i18n="order.story2">[sansaecoe] Hiyiko Cup Story (2)</span>
+          <span class="story-card-t" data-i18n="hiyiko2.title">히요코 잔 이야기 (2)</span>
+        </span>
+        <span class="story-card-a" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="prose prose--lead order-intro">
     <div class="stanza">
       <p data-i18n="order.lead1">산새코에의 히요코 잔 주문서입니다.</p>
       <p data-i18n="order.lead2">파손위험이 있어 현장수령만 가능합니다.</p>
@@ -299,18 +325,6 @@
     <img src="assets/order-soser.jpg" width="1600" height="1600" loading="lazy"
          alt="흰 소서의 모양과 표면, 잔과 함께 놓인 모습을 담은 여섯 장면" data-i18n-alt="order.soserAlt">
     <figcaption data-i18n="order.soserCap">소서의 사진을 확인해주세요. (사이즈 약 15 × 12.5cm)</figcaption>
-  </figure>
-
-  <p class="order-story" data-i18n="order.storyTitle">히요코 잔의 스토리가 궁금하시다면, 아래의 두가지 링크를 참고해주세요.</p>
-  <p class="order-story-links">
-    <a href="#t-hiyiko" data-sheet="hiyiko" aria-haspopup="dialog" data-i18n="order.story1">[sansaecoe] Hiyiko Cup Story</a>
-    <a href="#t-hiyiko-2" data-sheet="hiyiko-2" aria-haspopup="dialog" data-i18n="order.story2">[sansaecoe] Hiyiko Cup Story (2)</a>
-  </p>
-
-  <figure class="order-figure order-figure--cup">
-    <img src="assets/order-hiyiko.jpg" width="1200" height="1672" loading="lazy"
-         alt="소서 위에 놓인 아이보리빛 히요코 잔" data-i18n-alt="order.previewAlt">
-    <figcaption data-i18n="order.previewCap">* 소서가 포함된 사진입니다.</figcaption>
   </figure>
 
   <form class="order-form" id="orderForm" novalidate>
@@ -381,7 +395,8 @@
       </div>
       <input class="order-input order-input--date" type="date" id="orderDate"
              aria-label="희망 픽업일" data-i18n-aria="order.dateAria" required>
-      <p class="order-hint" id="orderDateHint" data-i18n="order.wed">수요일은 휴점이에요. 다른 날로 골라주세요.</p>
+      <p class="order-closed-note" data-i18n="order.closedNote">매주 수요일 정기 휴점 · 11월 24일 임시 휴무</p>
+      <p class="order-hint" id="orderDateHint" data-i18n="order.wed">수요일은 산새코에 정기 휴점일이에요. 수요일을 제외한 날짜를 골라주세요.</p>
     </div>
 
     <div class="order-q" role="group" aria-labelledby="oq6">
@@ -596,7 +611,7 @@
   </article>
 </div>
 
-<script src="i18n.js?v=20261120i" defer></script>
-<script src="script.js?v=20261120i" defer></script>
+<script src="i18n.js?v=20261120k" defer></script>
+<script src="script.js?v=20261120k" defer></script>
 </body>
 </html>

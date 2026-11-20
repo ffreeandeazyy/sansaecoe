@@ -253,6 +253,14 @@
   var ORDER_VIEW = 'https://docs.google.com/forms/d/1mMFNMiNpouspm8B6GLY-5VleLIEhMdzr4Ll9iw5mAw4/viewform';
   var ORDER_DATE = 'entry.521067999';
 
+  /* the days we cannot hand a cup over: every Wednesday, and now and then
+     a day of our own (2026-11-24 was one). add a date here when it comes. */
+  var CLOSED_WEEKDAY = 3;
+  var CLOSED_DATES = ['2026-11-24'];
+
+  /* the pickup is from the day after the order is written, as the form says */
+  var PICKUP_FROM_TOMORROW = true;
+
   /* one word in the language being read, with the Korean as the floor */
   function T(key, ko) {
     var dict = I18N[lang] || {};
@@ -267,8 +275,26 @@
   function tomorrowISO() {
     var d = new Date();
     d.setHours(0, 0, 0, 0);
-    d.setDate(d.getDate() + 1);
+    d.setDate(d.getDate() + (PICKUP_FROM_TOMORROW ? 1 : 0));
     return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+  }
+
+  /* 11월 24일 / 24 Nov / 11月24日 */
+  function shortDate(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+    if (!m) return '';
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    if (lang === 'en') return (+m[3]) + ' ' + months[+m[2] - 1];
+    if (lang === 'jp') return (+m[2]) + '月' + (+m[3]) + '日';
+    return (+m[2]) + '월 ' + (+m[3]) + '일';
+  }
+
+  /* why this day cannot be chosen, if it cannot */
+  function closedReason(iso) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(iso || '')) return null;
+    if (CLOSED_DATES.indexOf(iso) !== -1) return 'order.closedDate';
+    if (new Date(iso + 'T00:00:00').getDay() === CLOSED_WEEKDAY) return 'order.wed';
+    return null;
   }
 
   function formatDate(iso) {
@@ -338,15 +364,45 @@
     var btn = form.querySelector('.order-submit');
     var minISO = tomorrowISO();
 
-    /* from tomorrow on — today is already the day the order is written */
+    /* from tomorrow on, and never on a day we are closed — a Wednesday, or a
+       closing of our own. a day that cannot be kept is cleared at once and
+       the small line underneath says why, in the reader's own language. */
+    function dateHintText(key, iso) {
+      if (key === 'order.closedDate') {
+        return T('order.closedDate', '{date}은 임시 휴무일이에요. 다른 날짜를 골라주세요.').replace('{date}', shortDate(iso));
+      }
+      return T(
+        'order.wed',
+        '수요일은 산새코에 정기 휴점일이에요. 수요일을 제외한 날짜를 골라주세요.'
+      );
+    }
+
+    function showDateHint(key, iso) {
+      if (!hint) return;
+      if (!key) {
+        hint.classList.remove('is-on');
+        return;
+      }
+      hint.textContent = dateHintText(key, iso);
+      hint.classList.add('is-on');
+    }
+
+    function checkChosenDate() {
+      if (!dateEl) return;
+      var v = dateEl.value;
+      var reason = closedReason(v);
+      if (reason) {
+        dateEl.value = '';
+        showDateHint(reason, v);
+        return;
+      }
+      showDateHint(null);
+    }
+
     if (dateEl) {
       dateEl.min = minISO;
-      dateEl.addEventListener('change', function () {
-        if (!hint) return;
-        var v = dateEl.value;
-        var wed = !!v && new Date(v + 'T00:00:00').getDay() === 3;
-        hint.classList.toggle('is-on', wed);
-      });
+      dateEl.addEventListener('change', checkChosenDate);
+      dateEl.addEventListener('input', checkChosenDate);
     }
 
     function qOf(el) {
@@ -392,7 +448,7 @@
         { q: qOf(item), ok: !!item },
         { q: qOf(paid), ok: !!paid },
         { q: qOf(pack), ok: !!pack },
-        { q: qOf(dateEl), ok: /^\d{4}-\d{2}-\d{2}$/.test(dateVal) && dateVal >= minISO },
+        { q: qOf(dateEl), ok: /^\d{4}-\d{2}-\d{2}$/.test(dateVal) && dateVal >= minISO && !closedReason(dateVal) },
         { q: qOf(nameEl), ok: !!(nameEl && nameEl.value.trim()) },
         { q: qOf(phoneEl), ok: digits.length >= 9 },
         { q: qOf(privacy), ok: !!(privacy && privacy.checked) }
@@ -409,8 +465,16 @@
         var key = 'order.alert';
         var ko = '아직 채우지 않은 항목이 있어요. 표시된 곳을 확인해 주세요.';
         if (first.q === qOf(dateEl) && dateVal) {
-          key = 'order.alertDate';
-          ko = '희망 픽업일은 내일 이후 날짜로 골라주세요.';
+          var closed = closedReason(dateVal);
+          if (closed) {
+            dateEl.value = '';
+            showDateHint(closed, dateVal);
+            key = closed;
+            ko = dateHintText(closed, dateVal);
+          } else {
+            key = 'order.alertDate';
+            ko = '희망 픽업일은 내일 이후 날짜로 골라주세요.';
+          }
         } else if (first.q === qOf(phoneEl) && phoneEl && phoneEl.value.trim()) {
           key = 'order.alertPhone';
           ko = '연락처를 한 번 더 확인해 주세요.';

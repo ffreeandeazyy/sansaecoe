@@ -1507,41 +1507,100 @@ html.skip-intro body {
   word-break: keep-all;
 }
 
-/* the two stories, offered quietly before the form begins */
+/* the cup in the photograph sits right under the title, before anything else */
+
+.sheet figure.order-figure--top {
+  margin-top: clamp(0px, 0.6vw, 6px);
+}
+
+/* the two stories, offered as two doors beside the top of the sheet */
 
 .sheet .order-story {
-  margin: clamp(28px, 4.4vw, 38px) 0 0;
-  font-size: 12.5px;
-  line-height: 1.8;
-  color: var(--faint);
+  margin: clamp(24px, 3.8vw, 32px) 0 0;
+}
+
+.sheet .order-story-lead {
+  margin: 0 0 12px;
+  max-width: 32em;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--muted);
   word-break: keep-all;
 }
 
-.sheet .order-story-links {
+.sheet .order-story-cards {
+  display: grid;
+  gap: 9px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 620px) {
+  .sheet .order-story-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sheet .story-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 9px 0 0;
-}
-
-.sheet .order-story-links a {
-  display: inline-block;
-  padding: 5px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 11.5px;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  color: var(--muted);
-  text-decoration: none;
-  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
-}
-
-.sheet .order-story-links a:hover,
-.sheet .order-story-links a:focus-visible {
-  border-color: var(--ink);
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 62px;
+  padding: 13px 16px;
+  border: 1px solid var(--faint);
+  border-radius: 6px;
+  background: #fff;
   color: var(--ink);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease),
+    transform 0.35s var(--ease);
+}
+
+.sheet .story-card:hover,
+.sheet .story-card:focus-visible {
+  border-color: var(--ink);
+  background: #fbfaf6;
+  transform: translateY(-2px);
   outline: none;
+}
+
+.sheet .story-card-body {
+  display: block;
+  min-width: 0;
+}
+
+.sheet .story-card-k {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  color: var(--faint);
+  word-break: break-word;
+}
+
+.sheet .story-card-t {
+  display: block;
+  margin-top: 4px;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+.sheet .story-card-a {
+  flex: none;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--muted);
+  transition: color 0.3s var(--ease), translate 0.35s var(--ease);
+}
+
+.sheet .story-card:hover .story-card-a,
+.sheet .story-card:focus-visible .story-card-a {
+  color: var(--ink);
+  translate: 3px 0;
 }
 
 /* ---- the questions ---- */
@@ -1679,17 +1738,30 @@ html.skip-intro body {
 
 /* a gentle word about a Wednesday */
 
+.sheet .order-closed-note {
+  margin: 10px 0 0;
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: var(--faint);
+  word-break: keep-all;
+}
+
 .sheet .order-hint {
   display: none;
   margin: 9px 0 0;
-  font-size: 12.5px;
+  font-size: 13px;
   line-height: 1.75;
-  color: var(--ink-soft);
+  color: var(--ink);
   word-break: keep-all;
 }
 
 .sheet .order-hint.is-on {
   display: block;
+}
+
+.sheet .order-hint.is-on::before {
+  content: "· ";
+  color: var(--faint);
 }
 
 /* what is still missing */
