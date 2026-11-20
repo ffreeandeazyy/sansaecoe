@@ -1334,16 +1334,22 @@ html.skip-intro body {
   overflow-y: auto;
 }
 
-/* a tall screen is filled edge to edge too: the film keeps its height, the
-   right side of the room (the coat wall) goes off frame, and the door stands
-   at the right edge of the screen */
+/* on a tall screen the film sits in the middle of the paper, big enough to
+   read at a glance but not stretched past what the little file can carry —
+   a quiet white band above and below it, and the door standing at the right */
 @media (max-width: 768px), (orientation: portrait) {
   .intro {
-    background: #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .intro-video {
+    width: 100%;
+    height: 62vh;
+    height: 62dvh;
     object-fit: cover;
-    object-position: 40% center;
+    object-position: 16% center;
   }
 }
