@@ -17,6 +17,18 @@
   if (!veil || !sheetBody) return;
 
   /* =========================
+     the order window
+     the next round of cups is being prepared. while this is true the order
+     sheet opens on a short notice instead of the form, and nothing can be
+     sent. put it back to false and the whole form is here again, exactly as
+     it was — that is the only line to touch.
+     ========================= */
+
+  var ORDER_CLOSED = true;
+
+  if (ORDER_CLOSED) document.documentElement.classList.add('is-order-closed');
+
+  /* =========================
      the three languages
      ========================= */
 
@@ -108,7 +120,11 @@
   var langBtns = Array.prototype.slice.call(document.querySelectorAll('.lang [data-lang]'));
 
   function syncSheetLabel() {
-    var title = sheetBody.querySelector('h2');
+    /* the order sheet carries two versions of itself while the next round is
+       prepared, and only one of them is on the page */
+    var title = sheetBody.querySelector(
+      ORDER_CLOSED ? '.order-preparing h2' : '.order-live h2'
+    ) || sheetBody.querySelector('h2');
     var sheet = veil.querySelector('.sheet');
     if (title && sheet) sheet.setAttribute('aria-label', title.textContent.trim());
   }
@@ -369,6 +385,10 @@
   function initOrderSheet(root) {
     var form = root.querySelector('.order-form');
     if (!form) return;
+
+    /* while the next round is prepared the form is not on the page at all,
+       so there is nothing to fill and nothing that could be sent */
+    if (ORDER_CLOSED) return;
 
     var dateEl = form.querySelector('#orderDate');
     var hint = form.querySelector('#orderDateHint');

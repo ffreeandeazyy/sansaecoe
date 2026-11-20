@@ -74,6 +74,7 @@ window.SANSAECOE_I18N = {
     "hiyiko.cupAlt": "An ivory chick cup with a handle, on its saucer",
     "hiyiko.blinkAlt": "An ivory chick cup and saucer that slowly blinks brighter and dimmer",
     "hiyiko.order": "Order a Hiyiko cup",
+    "hiyiko.orderSoon": "(preparing)",
 
     /* ---- hiyiko cup story (2) ---- */
     "hiyiko2.kicker": "[sansaecoe] Hiyiko Cup Story (2)",
@@ -143,6 +144,9 @@ window.SANSAECOE_I18N = {
     /* ---- the order form ---- */
     "order.kicker": "Order",
     "order.title": "Order a Hiyiko cup",
+    "order.preparingTitle": "Hiyiko cup order sheet",
+    "order.preparingBadge": "Preparing",
+    "order.preparingNote": "We are preparing orders for the Hiyiko Fukui cup. Please wait just a little longer!",
     "order.pickupK": "Pick up at",
     "order.pickupV": "6F, 60 Apgujeong-ro 30-gil, Gangnam-gu, Seoul",
     "order.pickupNote": "※ The cups can break on the way, so they are handed over at the café only.",
@@ -286,6 +290,7 @@ window.SANSAECOE_I18N = {
     "hiyiko.cupAlt": "取っ手のついたアイボリー色のひよこカップとソーサー",
     "hiyiko.blinkAlt": "ゆっくり明るくなったり暗くなったりする、アイボリー色のひよこカップとソーサー",
     "hiyiko.order": "ひよこカップを注文する",
+    "hiyiko.orderSoon": "（準備中）",
 
     /* ---- hiyiko cup story (2) ---- */
     "hiyiko2.kicker": "[sansaecoe] Hiyiko Cup Story (2)",
@@ -355,6 +360,9 @@ window.SANSAECOE_I18N = {
     /* ---- the order form ---- */
     "order.kicker": "ご注文",
     "order.title": "ひよこカップを注文する",
+    "order.preparingTitle": "ひよこカップ注文書",
+    "order.preparingBadge": "準備中",
+    "order.preparingNote": "福井ヒヨコの器のご注文を準備しております。もう少しだけお待ちください！",
     "order.pickupK": "受け取り場所",
     "order.pickupV": "ソウル特別市 江南区 狎鴎亭路30キル 60, 6階 サンセコエ",
     "order.pickupNote": "※ 破損の恐れがあるため、店頭でのお渡しのみとなります。",

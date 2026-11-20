@@ -1864,6 +1864,50 @@ html.skip-intro body {
   margin-top: clamp(24px, 4vw, 34px);
 }
 
+/* the order window while the next round of cups is being prepared:
+   the little word beside the caption, and the short notice that takes the
+   form's place. one switch in script.js turns both of them */
+
+.order-soon {
+  display: none;
+}
+
+html.is-order-closed .order-soon {
+  display: inline;
+}
+
+.sheet .order-preparing {
+  display: none;
+}
+
+html.is-order-closed .sheet .order-preparing {
+  display: block;
+}
+
+html.is-order-closed .sheet .order-live {
+  display: none;
+}
+
+.sheet .order-preparing h2 {
+  margin-bottom: 10px;
+}
+
+.sheet .order-preparing-badge {
+  margin: 0 0 clamp(26px, 4vw, 38px);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  line-height: 1.7;
+  color: var(--faint);
+}
+
+.sheet .order-preparing-note {
+  max-width: 32em;
+}
+
+.sheet .order-preparing .order-story-cards {
+  margin-top: clamp(30px, 5vw, 46px);
+}
+
 @media (max-width: 620px) {
   .sheet .order-submit {
     width: 100%;
