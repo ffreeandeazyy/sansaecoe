@@ -1334,12 +1334,12 @@ html.skip-intro body {
   overflow-y: auto;
 }
 
-/* on a tall screen the film sits in the middle of the paper, big enough to
+/* on a tall screen the film sits in the middle of the dark, big enough to
    read at a glance but not stretched past what the little file can carry —
-   a quiet white band above and below it, and the door standing at the right */
+   a quiet black band above and below it, and the door standing at the right */
 @media (max-width: 768px), (orientation: portrait) {
   .intro {
-    background: #fff;
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
