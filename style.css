@@ -1402,6 +1402,18 @@ html.skip-intro body {
   word-break: keep-all;
 }
 
+/* the small notice that sits under the address, quieter than the address itself */
+
+.sheet .order-facts .note {
+  grid-column: 2;
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  word-break: keep-all;
+}
+
 /* the price line keeps its numbers still while it is read */
 
 .sheet .rules li b {
@@ -1866,6 +1878,10 @@ html.skip-intro body {
 
   .sheet .order-facts .k {
     line-height: 1.7;
+  }
+
+  .sheet .order-facts .note {
+    grid-column: 1;
   }
 
   .sheet .order-choice {
