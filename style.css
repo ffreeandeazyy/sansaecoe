@@ -1513,10 +1513,16 @@ html.skip-intro body {
   margin-top: clamp(0px, 0.6vw, 6px);
 }
 
+/* the first photograph stays a little smaller, so the two doors under it
+   are already in sight when the sheet opens */
+.sheet figure.order-figure--top img {
+  width: min(100%, 360px);
+}
+
 /* the two stories, offered as two doors beside the top of the sheet */
 
 .sheet .order-story {
-  margin: clamp(24px, 3.8vw, 32px) 0 0;
+  margin: clamp(24px, 3.8vw, 32px) 0 clamp(30px, 4.6vw, 44px);
 }
 
 .sheet .order-story-lead {

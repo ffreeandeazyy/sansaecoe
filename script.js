@@ -390,13 +390,19 @@
     function checkChosenDate() {
       if (!dateEl) return;
       var v = dateEl.value;
+
+      /* a day we are closed on: the field is emptied at once, and the line
+         underneath says why. it stays there until a day we can keep is
+         chosen — emptying the field again fires its own event, and that
+         must not wipe the words away. */
       var reason = closedReason(v);
       if (reason) {
         dateEl.value = '';
         showDateHint(reason, v);
         return;
       }
-      showDateHint(null);
+
+      if (v) showDateHint(null);
     }
 
     if (dateEl) {
