@@ -1334,15 +1334,16 @@ html.skip-intro body {
   overflow-y: auto;
 }
 
-/* a tall screen keeps the whole frame: the film is not cut at the sides,
-   and the quiet room above and below it stays paper white */
+/* a tall screen is filled edge to edge too: the film keeps its height, the
+   right side of the room (the coat wall) goes off frame, and the door stands
+   at the right edge of the screen */
 @media (max-width: 768px), (orientation: portrait) {
   .intro {
-    background: #fff;
+    background: #000;
   }
 
   .intro-video {
-    object-fit: contain;
-    background: transparent;
+    object-fit: cover;
+    object-position: 37% center;
   }
 }
